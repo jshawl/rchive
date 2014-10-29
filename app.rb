@@ -1,6 +1,5 @@
 require 'httparty'
 require 'open-uri'
-require 'pathname'
 require 'nokogiri'
 
 class Rget
@@ -27,10 +26,9 @@ class Rget
   def images
     @doc.css('img').map do |img| 
       src = @base_url + img['src']
-      filename = Pathname.new( src ).basename.to_s
-      p filename
-      img['src']
+      img.attributes['src'].value = 'data:image/jpeg;base64,' + Base64.encode64(open(src).read)
     end
+    File.open( 'tacos.html' , 'w') { |f| f.write(@doc.to_html) }
   end
 
 end
