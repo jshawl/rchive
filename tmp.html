@@ -2,2489 +2,1299 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>Helen V. Holmes | Portfolio</title>
-<meta name="viewport" content="width=device-width">
-<!-- custom css --><!-- endbuild --><link rel="shortcut icon" href="/favicon.ico?v=2">
-<style type="text/css">/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
-
-/**
- * 1. Set default font family to sans-serif.
- * 2. Prevent iOS text size adjust after orientation change, without disabling
- *    user zoom.
- */
-
-html {
-  font-family: sans-serif; /* 1 */
-  -ms-text-size-adjust: 100%; /* 2 */
-  -webkit-text-size-adjust: 100%; /* 2 */
-}
-
-/**
- * Remove default margin.
- */
-
-body {
+  <!--[if lt IE 9]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <meta charset="utf-8">
+  <title>Make your own gem - RubyGems Guides</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <meta http-equiv="Description" name="Description" content="Tutorials, guides, FAQs for RubyGems package management">
+  <meta http-equiv="Keywords" name="Keywords" content="rubygems, gems, programming, ruby, packages">
+  
+  
+  <!--[if !IE]>-->
+    <meta name="viewport" content="width=device-width">
+    <script type="text/javascript">
+      window.scrollTo(0, 1);
+    </script>
+  <!--<![endif]-->
+<style type="text/css">/*
+  html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
+  v1.4 2009-07-27 | Authors: Eric Meyer & Richard Clark
+  html5doctor.com/html-5-reset-stylesheet/
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
   margin: 0;
-}
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
 
-/* HTML5 display definitions
-   ========================================================================== */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
 
-/**
- * Correct `block` display not defined for any HTML5 element in IE 8/9.
- * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
- * Correct `block` display not defined for `main` in IE 11.
- */
+nav ul {
+  list-style: none; }
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-nav,
-section,
-summary {
-  display: block;
-}
+blockquote, q {
+  quotes: none; }
 
-/**
- * 1. Correct `inline-block` display not defined in IE 8/9.
- * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
- */
-
-audio,
-canvas,
-progress,
-video {
-  display: inline-block; /* 1 */
-  vertical-align: baseline; /* 2 */
-}
-
-/**
- * Prevent modern browsers from displaying `audio` without controls.
- * Remove excess height in iOS 5 devices.
- */
-
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-
-/**
- * Address `[hidden]` styling not present in IE 8/9/10.
- * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
- */
-
-[hidden],
-template {
-  display: none;
-}
-
-/* Links
-   ========================================================================== */
-
-/**
- * Remove the gray background color from active links in IE 10.
- */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
 
 a {
-  background: transparent;
-}
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
 
-/**
- * Improve readability when focused and also mouse hovered in all browsers.
- */
-
-a:active,
-a:hover {
-  outline: 0;
-}
-
-/* Text-level semantics
-   ========================================================================== */
-
-/**
- * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
- */
-
-abbr[title] {
-  border-bottom: 1px dotted;
-}
-
-/**
- * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
- */
-
-b,
-strong {
-  font-weight: bold;
-}
-
-/**
- * Address styling not present in Safari and Chrome.
- */
-
-dfn {
-  font-style: italic;
-}
-
-/**
- * Address variable `h1` font-size and margin within `section` and `article`
- * contexts in Firefox 4+, Safari, and Chrome.
- */
-
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
-/**
- * Address styling not present in IE 8/9.
- */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
 
 mark {
-  background: #ff0;
+  background-color: #ff9;
   color: #000;
-}
+  font-style: italic;
+  font-weight: bold; }
 
-/**
- * Address inconsistent and variable font size in all browsers.
- */
+del {
+  text-decoration: line-through; }
 
-small {
-  font-size: 80%;
-}
+abbr[title], dfn[title] {
+  cursor: help; }
 
-/**
- * Prevent `sub` and `sup` affecting `line-height` in all browsers.
- */
-
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sup {
-  top: -0.5em;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-/* Embedded content
-   ========================================================================== */
-
-/**
- * Remove border when inside `a` element in IE 8/9/10.
- */
-
-img {
-  border: 0;
-}
-
-/**
- * Correct overflow not hidden in IE 9/10/11.
- */
-
-svg:not(:root) {
-  overflow: hidden;
-}
-
-/* Grouping content
-   ========================================================================== */
-
-/**
- * Address margin not present in IE 8/9 and Safari.
- */
-
-figure {
-  margin: 1em 40px;
-}
-
-/**
- * Address differences between Firefox and other browsers.
- */
-
-hr {
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  height: 0;
-}
-
-/**
- * Contain overflow in all browsers.
- */
-
-pre {
-  overflow: auto;
-}
-
-/**
- * Address odd `em`-unit font size rendering in all browsers.
- */
-
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}
-
-/* Forms
-   ========================================================================== */
-
-/**
- * Known limitation: by default, Chrome and Safari on OS X allow very limited
- * styling of `select`, unless a `border` property is set.
- */
-
-/**
- * 1. Correct color not being inherited.
- *    Known issue: affects color of disabled elements.
- * 2. Correct font properties not being inherited.
- * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
- */
-
-button,
-input,
-optgroup,
-select,
-textarea {
-  color: inherit; /* 1 */
-  font: inherit; /* 2 */
-  margin: 0; /* 3 */
-}
-
-/**
- * Address `overflow` set to `hidden` in IE 8/9/10/11.
- */
-
-button {
-  overflow: visible;
-}
-
-/**
- * Address inconsistent `text-transform` inheritance for `button` and `select`.
- * All other form control elements do not inherit `text-transform` values.
- * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
- * Correct `select` style inheritance in Firefox.
- */
-
-button,
-select {
-  text-transform: none;
-}
-
-/**
- * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
- *    and `video` controls.
- * 2. Correct inability to style clickable `input` types in iOS.
- * 3. Improve usability and consistency of cursor style between image-type
- *    `input` and others.
- */
-
-button,
-html input[type="button"], /* 1 */
-input[type="reset"],
-input[type="submit"] {
-  -webkit-appearance: button; /* 2 */
-  cursor: pointer; /* 3 */
-}
-
-/**
- * Re-set default cursor for disabled elements.
- */
-
-button[disabled],
-html input[disabled] {
-  cursor: default;
-}
-
-/**
- * Remove inner padding and border in Firefox 4+.
- */
-
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-
-/**
- * Address Firefox 4+ setting `line-height` on `input` using `!important` in
- * the UA stylesheet.
- */
-
-input {
-  line-height: normal;
-}
-
-/**
- * It's recommended that you don't attempt to style these elements.
- * Firefox's implementation doesn't respect box-sizing, padding, or width.
- *
- * 1. Address box sizing set to `content-box` in IE 8/9/10.
- * 2. Remove excess padding in IE 8/9/10.
- */
-
-input[type="checkbox"],
-input[type="radio"] {
-  box-sizing: border-box; /* 1 */
-  padding: 0; /* 2 */
-}
-
-/**
- * Fix the cursor style for Chrome's increment/decrement buttons. For certain
- * `font-size` values of the `input`, it causes the cursor style of the
- * decrement button to change from `default` to `text`.
- */
-
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
-
-/**
- * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
- * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
- *    (include `-moz` to future-proof).
- */
-
-input[type="search"] {
-  -webkit-appearance: textfield; /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box; /* 2 */
-  box-sizing: content-box;
-}
-
-/**
- * Remove inner padding and search cancel button in Safari and Chrome on OS X.
- * Safari (but not Chrome) clips the cancel button when the search input has
- * padding (and `textfield` appearance).
- */
-
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-/**
- * Define consistent border, margin, and padding.
- */
-
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
-}
-
-/**
- * 1. Correct `color` not being inherited in IE 8/9/10/11.
- * 2. Remove padding so people aren't caught out if they zero out fieldsets.
- */
-
-legend {
-  border: 0; /* 1 */
-  padding: 0; /* 2 */
-}
-
-/**
- * Remove default vertical scrollbar in IE 8/9/10/11.
- */
-
-textarea {
-  overflow: auto;
-}
-
-/**
- * Don't inherit the `font-weight` (applied by a rule above).
- * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
- */
-
-optgroup {
-  font-weight: bold;
-}
-
-/* Tables
-   ========================================================================== */
-
-/**
- * Remove most spacing between table cells.
- */
-
+/* tables still need cellspacing="0" in the markup */
 table {
   border-collapse: collapse;
-  border-spacing: 0;
-}
+  border-spacing: 0; }
 
-td,
-th {
-  padding: 0;
-}
-@charset "UTF-8";
-@-webkit-keyframes fadein {
-  /* line 16, ../../app/_scss/_mixins.scss */
-  0% {
-    opacity: 0; }
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
 
-  /* line 19, ../../app/_scss/_mixins.scss */
-  100% {
-    opacity: 1; } }
-@keyframes fadein {
-  /* line 16, ../../app/_scss/_mixins.scss */
-  0% {
-    opacity: 0; }
+input, select {
+  vertical-align: middle; }
 
-  /* line 19, ../../app/_scss/_mixins.scss */
-  100% {
-    opacity: 1; } }
-@-webkit-keyframes fadein-and-down {
-  /* line 26, ../../app/_scss/_mixins.scss */
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(0);
-    transform: translateY(0); }
+body {
+  color: #222;
+  font-size: 13px;
+  font-family: "helvetica neue", arial, helvetica, "lucida grande", sans-serif; }
 
-  /* line 30, ../../app/_scss/_mixins.scss */
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(10px);
-    transform: translateY(10px); } }
-@keyframes fadein-and-down {
-  /* line 26, ../../app/_scss/_mixins.scss */
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(0);
-    transform: translateY(0); }
+h1, h2, h3, h4, h5, h6 {
+  color: #111;
+  font-family: "helvetica neue", Helvetica, arial, sans-serif; }
 
-  /* line 30, ../../app/_scss/_mixins.scss */
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(10px);
-    transform: translateY(10px); } }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_mixins\.scss}line{font-family:\0000375}}
-.desktop--none {
-  display: none; }
-  @media (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_mixins\.scss}line{font-family:\0000375}}
-    .desktop--none {
-      display: block; } }
+/* Success, error & notice boxes for messages and errors. */
+div.error, div.notice, div.success,
+#flash_failure, #flash_success, #flash_notice {
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 1em;
+  padding: 0.8em; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_mixins\.scss}line{font-family:\0000382}}
-.mobile--none {
-  display: block; }
-  @media (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_mixins\.scss}line{font-family:\0000382}}
-    .mobile--none {
-      display: none; } }
+div.error,
+#flash_failure {
+  background: #FBE3E4;
+  border-color: #FBC2C4;
+  color: #D12F19; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_mixins\.scss}line{font-family:\0000390}}
-.full-size {
-  width: 100vw;
-  height: 100vh; }
+div.error a,
+#flash_failure a {
+  color: #D12F19; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_global\.scss}line{font-family:\000031}}
-a {
-  cursor: pointer;
-  text-decoration: none;
-  color: indianred; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_global\.scss}line{font-family:\000035}}
-  a:hover {
-    color: #bc3a3a; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_global\.scss}line{font-family:\000038}}
-  a:visited {
-    color: #bc3a3a; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_global\.scss}line{font-family:\0000311}}
-  a:active {
-    color: #bc3a3a; }
+div.notice,
+#flash_notice {
+  background: #FFF6BF;
+  border-color: #FFD324;
+  color: #817134; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_index\.scss}line{font-family:\000031}}
-.index--sidebar-container {
-  height: 80%;
-  margin: 5% 0 0 0;
-  width: 23%;
-  float: left;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  text-align: center;
-  border-top: 0;
-  border-right: 1px;
-  border-bottom: 0;
-  border-left: 0;
-  border-style: solid;
-  border-color: #e6e6e6; }
-  @media (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_index\.scss}line{font-family:\000031}}
-    .index--sidebar-container {
-      height: 10%;
-      width: 70%;
-      margin: 5vh 15vw 0 15vw;
-      border-bottom: 1px solid #e6e6e6;
-      border-right: 0px; } }
-  @media (max-width: 550px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_index\.scss}line{font-family:\000031}}
-    .index--sidebar-container {
-      height: 40vh;
-      width: 80vw;
-      margin: 5vh 10vw 0 10vw;
-      border-bottom: 1px solid #e6e6e6;
-      border-right: 0px; } }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_index\.scss}line{font-family:\000031}}
-    .index--sidebar-container {
-      height: 200px;
-      width: 80%;
-      margin: 15% 10% 0 10%;
-      border-bottom: 1px solid #e6e6e6;
-      border-right: 0px; } }
+div.notice a,
+#flash_notice a {
+  color: #817134; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_index\.scss}line{font-family:\0000333}}
-.index--sidebar-image {
-  margin: 15% 0 0 0;
-  text-align: center;
-  width: 65%;
-  max-width: 100px; }
-  @media (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_index\.scss}line{font-family:\0000333}}
-    .index--sidebar-image {
-      margin: 0; } }
+div.success,
+#flash_success {
+  background: #E6EFC2;
+  border-color: #C6D880;
+  color: #529214; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_index\.scss}line{font-family:\0000343}}
-.index--sidebar-name {
-  top: 25%;
-  font-family: "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
-  font-size: 1.08696rem;
-  font-weight: 700;
-  margin: 1em 0 0 0; }
+div.success a,
+#flash_success a {
+  color: #529214; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_index\.scss}line{font-family:\0000352}}
-.index--sidebar-description {
-  font-weight: 300;
-  font-size: 0.7764rem;
-  line-height: 1.35;
-  color: #999999;
-  margin: 0.5em 10% 1em 10%;
-  width: 80%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_index\.scss}line{font-family:\0000359}}
-  .index--sidebar-description span {
-    clear: left;
-    display: block; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_index\.scss}line{font-family:\0000363}}
-  .index--sidebar-description a:hover {
-    text-decoration: none; }
-  @media (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_index\.scss}line{font-family:\0000352}}
-    .index--sidebar-description {
-      margin: 0 auto 0 auto;
-      width: auto;
-      min-width: 255px;
-      text-align: center; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_index\.scss}line{font-family:\0000371}}
-      .index--sidebar-description span {
-        display: inline;
-        clear: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_index\.scss}line{font-family:\0000374}}
-        .index--sidebar-description span:after {
-          content: "·";
-          margin: 0 5px 0 5px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_index\.scss}line{font-family:\0000379}}
-        .index--sidebar-description span:last-child:after {
-          content: ""; } }
+/* Misc classes and elements */
+/* Use a .box to create a padded box inside a column.  */
+.box {
+  background: #eee;
+  margin-bottom: 1.5em;
+  padding: 1.5em; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_index\.scss}line{font-family:\0000387}}
-.index--social-media-links {
-  margin-top: 20vh; }
-  @media (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_index\.scss}line{font-family:\0000387}}
-    .index--social-media-links {
-      clear: both; } }
+/* Use this to create a horizontal ruler across a column. */
+hr {
+  background: #ddd;
+  border: none;
+  clear: both;
+  color: #ddd;
+  float: none;
+  height: 1px;
+  margin: 0 0 1.4em;
+  width: 100%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_index\.scss}line{font-family:\0000395}}
-.index--social-media, .index--footer a {
-  margin-left: -10px;
-  padding-left: 5px;
-  line-height: 1.25rem;
-  font-family: "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 0.65876rem;
-  color: #999999;
-  text-transform: uppercase;
-  text-align: left;
-  text-decoration: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_index\.scss}line{font-family:\00003105}}
-  .index--social-media:hover, .index--footer a:hover {
-    margin-left: -15px;
-    border-left: 5px solid #999999;
-    text-decoration: none;
-    color: #555555; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_index\.scss}line{font-family:\00003111}}
-  .index--social-media:visited, .index--footer a:visited {
-    color: #999999; }
-  @media (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_index\.scss}line{font-family:\0000395}}
-    .index--social-media, .index--footer a {
-      display: none; } }
+hr.space {
+  background: #fff;
+  color: #fff; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_index\.scss}line{font-family:\00003119}}
-.index--post-titles {
-  width: 80vw;
-  margin-left: 20vw;
-  padding-top: 1vh; }
-  @media (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_index\.scss}line{font-family:\00003119}}
-    .index--post-titles {
-      margin: 0 auto 0 auto;
-      padding: 0.5vh 0 0 0;
-      clear: both; } }
-  @media (max-width: 550px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_index\.scss}line{font-family:\00003119}}
-    .index--post-titles {
-      width: 90vw;
-      margin: 0 auto 0 auto;
-      padding: 0.5vh 0 0 0;
-      clear: both; } }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_index\.scss}line{font-family:\00003136}}
-.index--post-title {
-  margin: 9vh 0 1vh 8vw; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_index\.scss}line{font-family:\00003138}}
-  .index--post-title a {
-    color: #333333;
-    font-weight: 700;
-    font-family: "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 1.25rem;
-    text-decoration: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_index\.scss}line{font-family:\00003144}}
-    .index--post-title a:hover {
-      text-decoration: none;
-      color: #e6e6e6; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_index\.scss}line{font-family:\00003148}}
-    .index--post-title a:visited {
-      color: #999999; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_index\.scss}line{font-family:\00003154}}
-.index--post-subtitle {
-  color: #e6e6e6;
-  font-family: "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
-  font-size: 0.83333rem;
-  margin: 0 0 0 8vw; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_index\.scss}line{font-family:\00003162}}
-.index--footer {
-  display: none;
-  width: 80vw;
-  margin: 10vh 10vw 0 10vw;
-  padding: 10vh 0 10vh 0;
-  border-top: 1px solid #e6e6e6; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_index\.scss}line{font-family:\00003168}}
-  .index--footer a {
-    margin-left: -5px;
-    padding-left: 2px;
-    display: inline; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_index\.scss}line{font-family:\00003172}}
-    .index--footer a:hover {
-      margin-left: -10px; }
-  @media (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_index\.scss}line{font-family:\00003162}}
-    .index--footer {
-      display: block; } }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\000031}}
-.post--navigation {
-  background-color: #333333;
+/* for image replacement */
+.ir {
   background-repeat: no-repeat;
-  width: 25px;
-  height: 25px;
-  padding: 5px;
-  padding-left: 7px;
-  padding-bottom: 4px;
-  padding-top: 7px;
-  position: fixed;
-  top: 4vh;
-  left: 2vw; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\0000313}}
-  .post--navigation img {
-    width: 90%; }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\000031}}
-    .post--navigation {
-      top: 20px;
-      left: 20px; } }
+  direction: ltr;
+  display: block;
+  overflow: hidden;
+  text-align: left;
+  text-indent: -999em; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\0000324}}
-.post p img {
+/* Hide for both screenreaders and browsers
+   css-discuss.incutio.com/wiki/Screenreader_Visibility */
+.hidden {
+  display: none;
+  visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders
+   www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden  */
+.visuallyhidden {
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible {
+  visibility: hidden; }
+
+/* >> The Magnificent CLEARFIX: Updated to prevent margin-collapsing on child elements << j.mp/bestclearfix */
+.clearfix:before,
+.clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  visibility: hidden; }
+
+.clearfix:after {
+  clear: both; }
+
+/* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
+.clearfix {
+  zoom: 1; }
+
+.ie7 img {
+  -ms-interpolation-mode: bicubic; }
+
+@media print {
+  * {
+    background: transparent !important;
+    color: #444 !important;
+    text-shadow: none !important; }
+
+  a, a:visited {
+    color: #444 !important;
+    text-decoration: underline; }
+
+  a:after {
+    content: " (" attr(href) ")"; }
+
+  abbr:after {
+    content: " (" attr(title) ")"; }
+
+  .ir a:after {
+    content: ""; }
+
+  /* Don't show links for images */
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+
+  thead {
+    display: table-header-group; }
+
+  /* css-discuss.incutio.com/wiki/Printing_Tables */
+  tr, img {
+    page-break-inside: avoid; }
+
+  @page {
+    margin: 0.5cm; }
+
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3; }
+
+  h2, h3 {
+    page-break-after: avoid; } }
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold; }
+
+h1 {
+  font-size: 2.2em;
+  line-height: 1;
+  margin-bottom: 0.25em; }
+
+h2 {
+  font-size: 1.6em;
+  line-height: 1.1;
+  margin-bottom: 0.25em; }
+
+h3 {
+  font-size: 1.3em;
+  line-height: 1;
+  margin-bottom: 0.25em; }
+
+h4 {
+  font-size: 1.1em;
+  line-height: 1.25;
+  margin-bottom: 0.25em; }
+
+h5 {
+  font-size: 1em;
+  margin-bottom: 0.25em; }
+
+h6 {
+  font-size: 1em;
+  margin-bottom: 0.25em; }
+
+/* Text elements */
+p {
+  margin-bottom: 0.5em; }
+
+p.last {
+  margin-bottom: 0; }
+
+p img {
+  margin: 1em 1em 1em 0;
+  padding: 0; }
+
+/* Use this if the image is at the top of the <p>. */
+p img.top {
+  margin-top: 0; }
+
+img {
+  margin: 0; }
+
+abbr, acronym {
+  border-bottom: 1px dotted #666;
+  cursor: help; }
+
+address {
+  font-style: italic;
+  margin-top: 1.5em; }
+
+del {
+  color: #666; }
+
+a, a:link {
+  color: #1a4882;
+  text-decoration: underline; }
+
+a:visited {
+  color: #1a4882; }
+
+a:hover {
+  color: #052246; }
+
+a:active,
+a:focus {
+  color: #1a4882; }
+
+.avatars a:link {
+  text-decoration: none; }
+
+blockquote {
+  border-left: 4px solid #d1d1d1;
+  color: #666;
+  font-style: italic;
+  margin: 1.5em 0;
+  padding-left: 1em; }
+
+strong {
+  font-weight: bold; }
+
+em,
+dfn {
+  font-style: italic; }
+
+dfn {
+  font-weight: bold; }
+
+pre, code {
+  margin: 1.5em 0;
+  white-space: pre;
+  /* CSS2 */
+  white-space: pre-wrap;
+  /* CSS 2.1 */
+  word-wrap: break-word;
+  /* IE */ }
+
+pre, code, tt {
+  font: 1em 'andale mono', 'monotype.com', 'lucida console', monospace;
+  line-height: 1.5; }
+
+pre.code {
+  background: #000;
+  color: #fff;
+  padding: 20px; }
+
+tt {
+  display: block;
+  line-height: 1.5;
+  margin: 1.5em 0; }
+
+/* Forms */
+/*removes dotted outline on submit buttons when clicking in firefox */
+input[type="submit"]::-moz-focus-inner {
+  border: none; }
+
+form ol {
+  list-style: none;
+  margin: 0 0 1em 0; }
+
+form ol ol {
+  margin-left: 0; }
+
+form ol li {
+  list-style-position: outside;
+  margin: 0 0 1em 0; }
+
+/*list-style-position fixes IE label margin bug*/
+form ol ol li {
+  list-style-position: outside;
+  margin: 0 0 .25em 0; }
+
+form ol li.error input {
+  background: #FBE3E4; }
+
+p.inline-errors {
+  color: #D12F19; }
+
+form ol li.file {
+  background: #e1e1e1;
+  border: 1px solid #c8c8c8;
+  padding: 10px; }
+
+form abbr {
+  border-bottom: 0; }
+
+label {
+  display: block; }
+
+.required label {
+  font-weight: bold; }
+
+.checkbox_field label,
+.radio_field label {
+  font-weight: normal; }
+
+a.cancel {
+  color: #7d0d0d; }
+
+.inline-hints {
+  color: #666;
+  font-size: 0.8em;
+  margin-bottom: 0.25em; }
+
+/* Fieldsets */
+fieldset {
+  background: #f1f1f1;
+  border: 1px solid #e3e3e3;
+  margin: 0 0 1.5em 0;
+  padding: 1.5em 1.5em 1em 1.5em; }
+
+fieldset fieldset,
+fieldset fieldset fieldset {
+  border: 0;
+  padding: 0; }
+
+legend {
+  font-weight: bold; }
+
+.ie6 legend, .ie7 legend {
+  margin-left: -7px; }
+
+fieldset.buttons {
+  background: inherit;
+  border: 0;
+  padding: 0; }
+
+fieldset.buttons li {
+  display: inline; }
+
+.radio fieldset {
+  margin: 0;
+  padding: 0; }
+
+/* Text fields */
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="range"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+  font-size: inherit;
+  padding: 3px 2px;
+  width: 300px; }
+
+.ie6 input {
+  vertical-align: text-bottom; }
+
+input[disabled='disabled'] {
+  background-color: #fcfcfc;
+  cursor: default; }
+
+input[type="checkbox"] {
+  margin: 0 3px 0 0;
+  position: relative;
+  top: -2px;
+  vertical-align: middle; }
+
+.ie7 input[type="checkbox"] {
+  vertical-align: baseline; }
+
+input[type="radio"] {
+  margin: 0 3px 0 0;
+  position: relative;
+  top: -2px;
+  vertical-align: middle; }
+
+.check_boxes label {
+  display: inline;
+  padding: 0;
+  vertical-align: middle; }
+
+.radio label {
+  padding: 0; }
+
+/* Textareas */
+textarea {
+  font-size: inherit;
+  height: 200px;
+  margin: 0 0.5em 0.5em 0;
+  padding: 5px;
+  width: 440px;
+  overflow: auto; }
+
+/* Select fields */
+fieldset .select select {
+  width: 200px;
+  font-size: 0.9em; }
+
+optgroup {
+  margin: 0 0 .5em 0; }
+
+/* Date & Time */
+form ol li.date ol li,
+form ol li.time ol li {
+  display: inline; }
+
+form ol li.datetime ol li {
+  display: inline-block; }
+
+form ol li.datetime select,
+form ol li.date select,
+form ol li.time select {
+  display: inline;
+  width: auto; }
+
+form ol li.date label,
+form ol li.time label {
   display: none; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\0000330}}
-.video-align {
-  position: relative;
-  left: 50%;
-  margin-left: -250px;
-  margin-top: 2%; }
+/* Tables */
+table {
+  margin-bottom: 2em;
+  width: 100%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\0000338}}
-.post-content img {
-  width: 100vw;
-  padding: 100px 0 100px 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\0000342}}
-.post-content p {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 1.08696rem;
-  line-height: 2.17391rem;
-  width: 60%;
-  margin: 0 20% 0 20%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\0000348}}
-  .post-content p:nth-child(2) {
-    margin: 4% 20% 0 20%; }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\0000342}}
-    .post-content p {
-      margin: 0 10% 0 10%;
-      width: 80%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\0000354}}
-      .post-content p:nth-child(2) {
-        margin: 5% 10% 0 10%; } }
+th {
+  border-bottom: 2px solid #ccc;
+  font-weight: bold;
+  text-align: left; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\0000361}}
-.post-footer {
-  position: relative;
-  bottom: 0;
-  padding: 10% 0 0 0;
-  height: 100px;
-  width: 100%;
-  display: block;
-  text-align: center;
-  font-family: "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 0.65876rem;
-  text-transform: uppercase; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\0000372}}
-  .post-footer a {
-    color: #999999; }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\0000361}}
-    .post-footer {
-      margin: 100px 0 0 0;
-      height: 100px;
-      width: 100%; } }
+td {
+  border-bottom: 1px solid #ddd; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\0000382}}
-.down {
-  width: 25px !important;
-  height: 25px;
-  margin-left: 49vw;
-  padding: 0 !important;
-  margin-top: 10px; }
+caption, th, td {
+  padding: 4px 10px 4px 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\0000390}}
-.post--intro, .post--united-brand-perception {
-  padding-top: 30vh;
-  height: 70vh; }
-  @media (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\0000390}}
-    .post--intro, .post--united-brand-perception {
-      padding: 10vh 0 0 0;
-      height: 130vh; } }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\0000390}}
-    .post--intro, .post--united-brand-perception {
-      padding: 50px 0 0 0;
-      height: auto; } }
+caption {
+  background: #f1f1f1;
+  margin-bottom: 1em;
+  padding: 10px 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003103}}
-iframe {
-  max-width: 100%; }
+tr, td, th {
+  vertical-align: middle; }
 
-@media (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003107}}
-  .post--united-brand-perception {
-    height: 160vh; } }
-@media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003107}}
-  .post--united-brand-perception {
-    height: 1050px; } }
+/* Use this if you use span-x classes on th/td. */
+table .last {
+  padding-right: 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003118}}
-.post--united-brochures img {
-  display: inline;
-  width: 19%; }
+/* Lists */
+ul, ol {
+  list-style-position: inside;
+  margin-bottom: 1.5em; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003124}}
-.auq--proposal {
-  min-height: 700px;
-  width: 100%;
-  display: block;
-  background: url("/img/auq--proposal.43ea.jpg") no-repeat center center fixed;
-  background-color: #e6e6e6;
-  background-size: cover;
-  margin: 0 0 20vh 0; }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003124}}
-    .auq--proposal {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/auq--proposal.43ea.jpg") no-repeat center;
-      background-size: none; } }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003124}}
-    .auq--proposal {
-      min-height: 700px;
-      width: 100%;
-      display: block;
-      background: url("/img/auq--proposal-m.2e02.jpg") no-repeat center center fixed;
-      background-color: #e6e6e6;
-      background-size: cover;
-      margin: 0 0 20px 0; } }
-  @media only screen and (max-width: 960px) and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003124}}
-    .auq--proposal {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/auq--proposal-m.2e02.jpg") no-repeat center;
-      background-size: none; } }
+ul {
+  list-style-type: disc; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003133}}
-.auq--storyboards {
-  min-height: 700px;
-  width: 100%;
-  display: block;
-  background: url("/img/auq--storyboards.61e7.jpg") no-repeat center center fixed;
-  background-color: #e6e6e6;
-  background-size: cover;
-  margin: 20vh 0 20vh 0; }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003133}}
-    .auq--storyboards {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/auq--storyboards.61e7.jpg") no-repeat center;
-      background-size: none; } }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003133}}
-    .auq--storyboards {
-      min-height: 700px;
-      width: 100%;
-      display: block;
-      background: url("/img/auq--storyboards-m.1186.jpg") no-repeat center center fixed;
-      background-color: #e6e6e6;
-      background-size: cover;
-      margin: 20px 0 20px 0; } }
-  @media only screen and (max-width: 960px) and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003133}}
-    .auq--storyboards {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/auq--storyboards-m.1186.jpg") no-repeat center;
-      background-size: none; } }
+ol {
+  list-style-type: decimal; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003142}}
-.auq--app {
-  min-height: 700px;
-  width: 100%;
-  display: block;
-  background: url("/img/auq--app.5fcc.jpg") no-repeat center center fixed;
-  background-color: #e6e6e6;
-  background-size: cover;
-  margin: 20vh 0 20vh 0; }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003142}}
-    .auq--app {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/auq--app.5fcc.jpg") no-repeat center;
-      background-size: none; } }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003142}}
-    .auq--app {
-      min-height: 700px;
-      width: 100%;
-      display: block;
-      background: url("/img/auq--app-m.f9ff.jpg") no-repeat center center fixed;
-      background-color: #e6e6e6;
-      background-size: cover;
-      margin: 20px 0 20px 0; } }
-  @media only screen and (max-width: 960px) and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003142}}
-    .auq--app {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/auq--app-m.f9ff.jpg") no-repeat center;
-      background-size: none; } }
+dl {
+  line-height: 1.4;
+  margin-bottom: 1.5em; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003151}}
-.auq--map {
-  min-height: 700px;
-  width: 100%;
-  display: block;
-  background: url("/img/auq--map.3203.jpg") no-repeat center center fixed;
-  background-color: #e6e6e6;
-  background-size: cover;
-  margin: 20vh 0 20vh 0; }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003151}}
-    .auq--map {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/auq--map.3203.jpg") no-repeat center;
-      background-size: none; } }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003151}}
-    .auq--map {
-      min-height: 700px;
-      width: 100%;
-      display: block;
-      background: url("/img/auq--map-m.b641.jpg") no-repeat center center fixed;
-      background-color: #e6e6e6;
-      background-size: cover;
-      margin: 20px 0 20px 0;
-      height: 650px; } }
-  @media only screen and (max-width: 960px) and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003151}}
-    .auq--map {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/auq--map-m.b641.jpg") no-repeat center;
-      background-size: none; } }
+dl dt {
+  font-weight: bold;
+  margin-top: 0.5em; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003161}}
-.auq--desktop {
-  min-height: 700px;
-  width: 100%;
-  display: block;
-  background: url("/img/auq--desktop.d642.gif") no-repeat center center fixed;
-  background-color: #e6e6e6;
-  background-size: cover;
-  margin: 20vh 0 0 0; }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003161}}
-    .auq--desktop {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/auq--desktop.d642.gif") no-repeat center;
-      background-size: none; } }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003161}}
-    .auq--desktop {
-      min-height: 700px;
-      width: 100%;
-      display: block;
-      background: url("/img/auq--desktop-m.dc6e.gif") no-repeat center center fixed;
-      background-color: #e6e6e6;
-      background-size: cover;
-      margin: 0; } }
-  @media only screen and (max-width: 960px) and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003161}}
-    .auq--desktop {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/auq--desktop-m.dc6e.gif") no-repeat center;
-      background-size: none; } }
+dl dd {
+  margin-bottom: 0em; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003170}}
-.got--planning {
-  min-height: 700px;
-  width: 100%;
-  display: block;
-  background: url("/img/got--planning.b339.jpg") no-repeat center center fixed;
-  background-color: #e6e6e6;
-  background-size: cover;
-  margin: 0 0 20vh 0; }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003170}}
-    .got--planning {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/got--planning.b339.jpg") no-repeat center;
-      background-size: none; } }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003170}}
-    .got--planning {
-      min-height: 700px;
-      width: 100%;
-      display: block;
-      background: url("/img/got--planning-m.3857.jpg") no-repeat center center fixed;
-      background-color: #e6e6e6;
-      background-size: cover;
-      margin: 20px 0 20px 0; } }
-  @media only screen and (max-width: 960px) and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003170}}
-    .got--planning {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/got--planning-m.3857.jpg") no-repeat center;
-      background-size: none; } }
+dd {
+  margin-left: 0.5em; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003179}}
-.got--sketches-1 {
-  min-height: 700px;
-  width: 100%;
-  display: block;
-  background: url("/img/got--sketches-1.2720.jpg") no-repeat center center fixed;
-  background-color: #e6e6e6;
-  background-size: cover;
-  margin: 20vh 0 0 0; }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003179}}
-    .got--sketches-1 {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/got--sketches-1.2720.jpg") no-repeat center;
-      background-size: none; } }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003179}}
-    .got--sketches-1 {
-      min-height: 700px;
-      width: 100%;
-      display: block;
-      background: url("/img/got--sketches-1-m.b0e4.jpg") no-repeat center center fixed;
-      background-color: #e6e6e6;
-      background-size: cover;
-      margin: 20px 0 0 0; } }
-  @media only screen and (max-width: 960px) and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003179}}
-    .got--sketches-1 {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/got--sketches-1-m.b0e4.jpg") no-repeat center;
-      background-size: none; } }
+li {
+  line-height: 1.4; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003188}}
-.got--sketches-2 {
-  min-height: 700px;
-  width: 100%;
-  display: block;
-  background: url("/img/got--sketches-2.f446.jpg") no-repeat center center fixed;
-  background-color: #e6e6e6;
-  background-size: cover;
-  margin: 0; }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003188}}
-    .got--sketches-2 {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/got--sketches-2.f446.jpg") no-repeat center;
-      background-size: none; } }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003188}}
-    .got--sketches-2 {
-      min-height: 700px;
-      width: 100%;
-      display: block;
-      background: url("/img/got--sketches-2-m.b4ec.jpg") no-repeat center center fixed;
-      background-color: #e6e6e6;
-      background-size: cover;
-      margin: 0; } }
-  @media only screen and (max-width: 960px) and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003188}}
-    .got--sketches-2 {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/got--sketches-2-m.b4ec.jpg") no-repeat center;
-      background-size: none; } }
+ol ol, ol ul, ul ul, ul ol {
+  margin-left: 1em; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003197}}
-.got--sketches-3 {
-  min-height: 700px;
-  width: 100%;
-  display: block;
-  background: url("/img/got--sketches-3.4fd1.jpg") no-repeat center center fixed;
-  background-color: #e6e6e6;
-  background-size: cover;
-  margin: 0 0 20vh 0; }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003197}}
-    .got--sketches-3 {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/got--sketches-3.4fd1.jpg") no-repeat center;
-      background-size: none; } }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003197}}
-    .got--sketches-3 {
-      min-height: 700px;
-      width: 100%;
-      display: block;
-      background: url("/img/got--sketches-3-m.4f29.jpg") no-repeat center center fixed;
-      background-color: #e6e6e6;
-      background-size: cover;
-      margin: 0 0 20px 0; } }
-  @media only screen and (max-width: 960px) and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003197}}
-    .got--sketches-3 {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/got--sketches-3-m.4f29.jpg") no-repeat center;
-      background-size: none; } }
+body {
+  font-family: helvetica neue, helvetica, sans-serif;
+  line-height: 1; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003206}}
-.got--book-cover-1 {
-  min-height: 700px;
-  width: 100%;
-  display: block;
-  background: url("/img/got--book-cover-1.4cfa.jpg") no-repeat center center fixed;
-  background-color: #e6e6e6;
-  background-size: cover;
-  margin: 20vh 0 0 0; }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003206}}
-    .got--book-cover-1 {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/got--book-cover-1.4cfa.jpg") no-repeat center;
-      background-size: none; } }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003206}}
-    .got--book-cover-1 {
-      min-height: 700px;
-      width: 100%;
-      display: block;
-      background: url("/img/got--book-cover-1-m.54d7.jpg") no-repeat center center fixed;
-      background-color: #e6e6e6;
-      background-size: cover;
-      margin: 20px 0 0 0; } }
-  @media only screen and (max-width: 960px) and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003206}}
-    .got--book-cover-1 {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/got--book-cover-1-m.54d7.jpg") no-repeat center;
-      background-size: none; } }
+body.home {
+  background: url("/images/background.jpg") repeat; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003215}}
-.got--book-cover-1-detail {
-  min-height: 700px;
-  width: 100%;
-  display: block;
-  background: url("/img/got--book-cover-1-details.a126.jpg") no-repeat center center fixed;
-  background-color: #e6e6e6;
-  background-size: cover;
-  margin: 0; }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003215}}
-    .got--book-cover-1-detail {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/got--book-cover-1-details.a126.jpg") no-repeat center;
-      background-size: none; } }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003215}}
-    .got--book-cover-1-detail {
-      min-height: 700px;
-      width: 100%;
-      display: block;
-      background: url("/img/got--book-cover-1-details-m.1029.jpg") no-repeat center center fixed;
-      background-color: #e6e6e6;
-      background-size: cover;
-      margin: 0; } }
-  @media only screen and (max-width: 960px) and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003215}}
-    .got--book-cover-1-detail {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/got--book-cover-1-details-m.1029.jpg") no-repeat center;
-      background-size: none; } }
+.left {
+  float: left; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003224}}
-.got--book-cover-2 {
-  min-height: 700px;
-  width: 100%;
-  display: block;
-  background: url("/img/got--book-cover-2.bd3f.jpg") no-repeat center center fixed;
-  background-color: #e6e6e6;
-  background-size: cover;
-  margin: 0; }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003224}}
-    .got--book-cover-2 {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/got--book-cover-2.bd3f.jpg") no-repeat center;
-      background-size: none; } }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003224}}
-    .got--book-cover-2 {
-      min-height: 700px;
-      width: 100%;
-      display: block;
-      background: url("/img/got--book-cover-2-m.1de2.jpg") no-repeat center center fixed;
-      background-color: #e6e6e6;
-      background-size: cover;
-      margin: 0; } }
-  @media only screen and (max-width: 960px) and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003224}}
-    .got--book-cover-2 {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/got--book-cover-2-m.1de2.jpg") no-repeat center;
-      background-size: none; } }
+.right {
+  float: right; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003233}}
-.got--book-cover-2-detail {
-  min-height: 700px;
-  width: 100%;
-  display: block;
-  background: url("/img/got--book-cover-2-details.2c55.jpg") no-repeat center center fixed;
-  background-color: #e6e6e6;
-  background-size: cover;
-  margin: 0; }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003233}}
-    .got--book-cover-2-detail {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/got--book-cover-2-details.2c55.jpg") no-repeat center;
-      background-size: none; } }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003233}}
-    .got--book-cover-2-detail {
-      min-height: 700px;
-      width: 100%;
-      display: block;
-      background: url("/img/got--book-cover-2-details-m.fa8c.jpg") no-repeat center center fixed;
-      background-color: #e6e6e6;
-      background-size: cover;
-      margin: 0; } }
-  @media only screen and (max-width: 960px) and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003233}}
-    .got--book-cover-2-detail {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/got--book-cover-2-details-m.fa8c.jpg") no-repeat center;
-      background-size: none; } }
+#head-wrapper {
+  background: #240101 url("/images/background.jpg") repeat;
+  width: 100%; }
+  #head-wrapper #small-top {
+    margin: 0 auto;
+    padding: 20px 0;
+    max-width: 480px; }
+    #head-wrapper #small-top header {
+      margin: 0 auto;
+      height: 75px;
+      max-width: 450px; }
+      #head-wrapper #small-top header a {
+        text-decoration: none; }
+      #head-wrapper #small-top header h1 {
+        background: url("/images/logo-small.png") 5px 0 no-repeat;
+        float: left;
+        height: 70px;
+        padding-top: 13px;
+        text-indent: 90px;
+        color: white;
+        font: 300 42px/42px "proxima-nova-1", "proxima-nova-2", "museo-sans-1", "museo-sans-2", helvetica neue, sans-serif;
+        letter-spacing: 1px;
+        text-shadow: 0 0 1px #333; }
+  #head-wrapper #homepage-top {
+    margin: 0 auto;
+    padding: 30px 0;
+    width: 978px; }
+    #head-wrapper #homepage-top header {
+      height: 150px; }
+      #head-wrapper #homepage-top header h1 {
+        background: url("/images/logo.png") 5px 0 no-repeat;
+        float: left;
+        height: 150px;
+        text-indent: -9999px;
+        width: 168px; }
+      #head-wrapper #homepage-top header #the-sell {
+        float: left;
+        margin: 25px 0 0 0;
+        width: 726px; }
+        #head-wrapper #homepage-top header #the-sell h2 {
+          color: white;
+          font: 300 42px/42px helvetica neue, sans-serif;
+          letter-spacing: 1px;
+          text-shadow: 0 0 1px #333; }
+        #head-wrapper #homepage-top header #the-sell p.tagline {
+          color: #CCC;
+          font: 300 18px/22px helvetica neue, sans-serif;
+          margin: 6px 0 0 0;
+          text-shadow: 0 0 1px #333; }
+          #head-wrapper #homepage-top header #the-sell p.tagline a, #head-wrapper #homepage-top header #the-sell p.tagline a:visited, #head-wrapper #homepage-top header #the-sell p.tagline a:link {
+            color: #ccc; }
+    #head-wrapper #homepage-top #chapters {
+      margin: 0 0 0 168px; }
+      #head-wrapper #homepage-top #chapters a, #head-wrapper #homepage-top #chapters a:visited, #head-wrapper #homepage-top #chapters a:link {
+        color: #fff;
+        text-decoration: none; }
+      #head-wrapper #homepage-top #chapters a:hover {
+        color: #AD141E; }
+      #head-wrapper #homepage-top #chapters h2 {
+        color: white;
+        font: 700 30px/32px "proxima-nova-1", "proxima-nova-2", "museo-sans-1", "museo-sans-2", helvetica neue, sans-serif;
+        text-shadow: 0 1px 1px #222;
+        margin-top: 20px; }
+      #head-wrapper #homepage-top #chapters p {
+        color: #AAA;
+        font: 300 16px/18px "proxima-nova-1", "proxima-nova-2", "museo-sans-1", "museo-sans-2", helvetica neue, sans-serif;
+        margin: 4px 122px 0 0; }
+        #head-wrapper #homepage-top #chapters p a, #head-wrapper #homepage-top #chapters p a:visited, #head-wrapper #homepage-top #chapters p a:link {
+          color: #AAA; }
+        #head-wrapper #homepage-top #chapters p a:hover {
+          color: #AD141E; }
+      #head-wrapper #homepage-top #chapters p.introduction {
+        margin-bottom: 1.5em;
+        line-height: 1.3em;
+        width: 70%;
+        color: #CCC; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003242}}
-.got--book-sides {
-  min-height: 700px;
-  width: 100%;
-  display: block;
-  background: url("/img/got--book-sides.9f0e.jpg") no-repeat center center fixed;
-  background-color: #e6e6e6;
-  background-size: cover;
-  margin: 0; }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003242}}
-    .got--book-sides {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/got--book-sides.9f0e.jpg") no-repeat center;
-      background-size: none; } }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003242}}
-    .got--book-sides {
-      min-height: 700px;
-      width: 100%;
-      display: block;
-      background: url("/img/got--book-sides-m.d59e.jpg") no-repeat center center fixed;
-      background-color: #e6e6e6;
-      background-size: cover;
-      margin: 0; } }
-  @media only screen and (max-width: 960px) and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003242}}
-    .got--book-sides {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/got--book-sides-m.d59e.jpg") no-repeat center;
-      background-size: none; } }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003251}}
-.tle--proposal {
-  min-height: 700px;
-  width: 100%;
-  display: block;
-  background: url("/img/tle--proposal.d876.jpg") no-repeat center center fixed;
-  background-color: #e6e6e6;
-  background-size: cover;
-  margin: 0 0 20vh 0; }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003251}}
-    .tle--proposal {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/tle--proposal.d876.jpg") no-repeat center;
-      background-size: none; } }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003251}}
-    .tle--proposal {
-      min-height: 700px;
-      width: 100%;
-      display: block;
-      background: url("/img/tle--proposal-m.5317.jpg") no-repeat center center fixed;
-      background-color: #e6e6e6;
-      background-size: cover;
-      margin: 20px 0 20px 0;
-      height: 720px; } }
-  @media only screen and (max-width: 960px) and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003251}}
-    .tle--proposal {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/tle--proposal-m.5317.jpg") no-repeat center;
-      background-size: none; } }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003261}}
-.tle--sketches {
-  min-height: 700px;
-  width: 100%;
-  display: block;
-  background: url("/img/tle--sketches.a7e0.jpg") no-repeat center center fixed;
-  background-color: #e6e6e6;
-  background-size: cover;
-  margin: 20vh 0 20vh 0; }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003261}}
-    .tle--sketches {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/tle--sketches.a7e0.jpg") no-repeat center;
-      background-size: none; } }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003261}}
-    .tle--sketches {
-      min-height: 700px;
-      width: 100%;
-      display: block;
-      background: url("/img/tle--sketches-m.603a.jpg") no-repeat center center fixed;
-      background-color: #e6e6e6;
-      background-size: cover;
-      margin: 20px 0 20px 0; } }
-  @media only screen and (max-width: 960px) and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003261}}
-    .tle--sketches {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/tle--sketches-m.603a.jpg") no-repeat center;
-      background-size: none; } }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003270}}
-.tle--callout {
-  min-height: 700px;
-  width: 100%;
-  display: block;
-  background: url("/img/tle--callout.58f0.jpg") no-repeat center center fixed;
-  background-color: #e6e6e6;
-  background-size: cover;
-  margin: 20vh 0 20vh 0; }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003270}}
-    .tle--callout {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/tle--callout.58f0.jpg") no-repeat center;
-      background-size: none; } }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003270}}
-    .tle--callout {
-      min-height: 700px;
-      width: 100%;
-      display: block;
-      background: url("/img/tle--callout-m.09c9.jpg") no-repeat center center fixed;
-      background-color: #e6e6e6;
-      background-size: cover;
-      margin: 20px 0 20px 0;
-      height: 406px; } }
-  @media only screen and (max-width: 960px) and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003270}}
-    .tle--callout {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/tle--callout-m.09c9.jpg") no-repeat center;
-      background-size: none; } }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003280}}
-.tle--save-the-date {
-  min-height: 700px;
-  width: 100%;
-  display: block;
-  background: url("/img/tle--save-the-date.3b34.jpg") no-repeat center center fixed;
-  background-color: #e6e6e6;
-  background-size: cover;
-  margin: 20vh 0 0 0; }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003280}}
-    .tle--save-the-date {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/tle--save-the-date.3b34.jpg") no-repeat center;
-      background-size: none; } }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003280}}
-    .tle--save-the-date {
-      min-height: 700px;
-      width: 100%;
-      display: block;
-      background: url("/img/tle--save-the-date-m.be53.jpg") no-repeat center center fixed;
-      background-color: #e6e6e6;
-      background-size: cover;
-      margin: 20px 0 0 0; } }
-  @media only screen and (max-width: 960px) and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003280}}
-    .tle--save-the-date {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/tle--save-the-date-m.be53.jpg") no-repeat center;
-      background-size: none; } }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003289}}
-.tle--poster-full {
-  min-height: 700px;
-  width: 100%;
-  display: block;
-  background: url("/img/tle--poster-full.928f.jpg") no-repeat center center fixed;
-  background-color: #e6e6e6;
-  background-size: cover;
-  margin: 0 0 20vh 0; }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003289}}
-    .tle--poster-full {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/tle--poster-full.928f.jpg") no-repeat center;
-      background-size: none; } }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003289}}
-    .tle--poster-full {
-      min-height: 700px;
-      width: 100%;
-      display: block;
-      background: url("/img/tle--poster-full-m.1c84.jpg") no-repeat center center fixed;
-      background-color: #e6e6e6;
-      background-size: cover;
-      margin: 0 0 20px 0; } }
-  @media only screen and (max-width: 960px) and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003289}}
-    .tle--poster-full {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/tle--poster-full-m.1c84.jpg") no-repeat center;
-      background-size: none; } }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003298}}
-.tle--poster-interior {
-  min-height: 700px;
-  width: 100%;
-  display: block;
-  background: url("/img/tle--poster-interior.4d31.jpg") no-repeat center center fixed;
-  background-color: #e6e6e6;
-  background-size: cover;
-  margin: 20vh 0 0 0; }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003298}}
-    .tle--poster-interior {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/tle--poster-interior.4d31.jpg") no-repeat center;
-      background-size: none; } }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003298}}
-    .tle--poster-interior {
-      min-height: 700px;
-      width: 100%;
-      display: block;
-      background: url("/img/tle--poster-interior-m.53fc.jpg") no-repeat center center fixed;
-      background-color: #e6e6e6;
-      background-size: cover;
-      margin: 20px 0 0 0; } }
-  @media only screen and (max-width: 960px) and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003298}}
-    .tle--poster-interior {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/tle--poster-interior-m.53fc.jpg") no-repeat center;
-      background-size: none; } }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003307}}
-.tle--booklet-cover {
-  min-height: 700px;
-  width: 100%;
-  display: block;
-  background: url("/img/tle--booklet-cover.e845.jpg") no-repeat center center fixed;
-  background-color: #e6e6e6;
-  background-size: cover;
-  margin: 0 0 20vh 0; }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003307}}
-    .tle--booklet-cover {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/tle--booklet-cover.e845.jpg") no-repeat center;
-      background-size: none; } }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003307}}
-    .tle--booklet-cover {
-      min-height: 700px;
-      width: 100%;
-      display: block;
-      background: url("/img/tle--booklet-cover-m.49f4.jpg") no-repeat center center fixed;
-      background-color: #e6e6e6;
-      background-size: cover;
-      margin: 0 0 20px 0; } }
-  @media only screen and (max-width: 960px) and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003307}}
-    .tle--booklet-cover {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/tle--booklet-cover-m.49f4.jpg") no-repeat center;
-      background-size: none; } }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003316}}
-.tle--booklet-spread-1 {
-  min-height: 700px;
-  width: 100%;
-  display: block;
-  background: url("/img/tle--booklet-spread-1.d1a9.jpg") no-repeat center center fixed;
-  background-color: #e6e6e6;
-  background-size: cover;
-  margin: 20vh 0 0 0; }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003316}}
-    .tle--booklet-spread-1 {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/tle--booklet-spread-1.d1a9.jpg") no-repeat center;
-      background-size: none; } }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003316}}
-    .tle--booklet-spread-1 {
-      min-height: 700px;
-      width: 100%;
-      display: block;
-      background: url("/img/tle--booklet-spread-1-m.e430.jpg") no-repeat center center fixed;
-      background-color: #e6e6e6;
-      background-size: cover;
-      margin: 20px 0 0 0; } }
-  @media only screen and (max-width: 960px) and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003316}}
-    .tle--booklet-spread-1 {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/tle--booklet-spread-1-m.e430.jpg") no-repeat center;
-      background-size: none; } }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003325}}
-.tle--booklet-spread-2 {
-  min-height: 700px;
-  width: 100%;
-  display: block;
-  background: url("/img/tle--booklet-spread-2.052b.jpg") no-repeat center center fixed;
-  background-color: #e6e6e6;
-  background-size: cover;
-  margin: 0; }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003325}}
-    .tle--booklet-spread-2 {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/tle--booklet-spread-2.052b.jpg") no-repeat center;
-      background-size: none; } }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003325}}
-    .tle--booklet-spread-2 {
-      min-height: 700px;
-      width: 100%;
-      display: block;
-      background: url("/img/tle--booklet-spread-2-m.c57c.jpg") no-repeat center center fixed;
-      background-color: #e6e6e6;
-      background-size: cover;
-      margin: 0; } }
-  @media only screen and (max-width: 960px) and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003325}}
-    .tle--booklet-spread-2 {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/tle--booklet-spread-2-m.c57c.jpg") no-repeat center;
-      background-size: none; } }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003334}}
-.tle--booklet-spread-3 {
-  min-height: 700px;
-  width: 100%;
-  display: block;
-  background: url("/img/tle--booklet-spread-3.b570.jpg") no-repeat center center fixed;
-  background-color: #e6e6e6;
-  background-size: cover;
-  margin: 0; }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003334}}
-    .tle--booklet-spread-3 {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/tle--booklet-spread-3.b570.jpg") no-repeat center;
-      background-size: none; } }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003334}}
-    .tle--booklet-spread-3 {
-      min-height: 700px;
-      width: 100%;
-      display: block;
-      background: url("/img/tle--booklet-spread-3-m.9d30.jpg") no-repeat center center fixed;
-      background-color: #e6e6e6;
-      background-size: cover;
-      margin: 0; } }
-  @media only screen and (max-width: 960px) and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003334}}
-    .tle--booklet-spread-3 {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/tle--booklet-spread-3-m.9d30.jpg") no-repeat center;
-      background-size: none; } }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003343}}
-.united--proposal {
-  min-height: 700px;
-  width: 100%;
-  display: block;
-  background: url("/img/united--proposal.b63a.jpg") no-repeat center center fixed;
-  background-color: #e6e6e6;
-  background-size: cover;
-  margin: 0 0 20vh 0; }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003343}}
-    .united--proposal {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/united--proposal.b63a.jpg") no-repeat center;
-      background-size: none; } }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003343}}
-    .united--proposal {
-      min-height: 700px;
-      width: 100%;
-      display: block;
-      background: url("/img/united--proposal-m.f581.jpg") no-repeat center center fixed;
-      background-color: #e6e6e6;
-      background-size: cover;
-      margin: 20px 0 20px 0; } }
-  @media only screen and (max-width: 960px) and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003343}}
-    .united--proposal {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/united--proposal-m.f581.jpg") no-repeat center;
-      background-size: none; } }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003352}}
-.united--sketches {
-  min-height: 700px;
-  width: 100%;
-  display: block;
-  background: url("/img/united--sketches.15ba.jpg") no-repeat center center fixed;
-  background-color: #e6e6e6;
-  background-size: cover;
-  margin: 20vh 0 0 0; }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003352}}
-    .united--sketches {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/united--sketches.15ba.jpg") no-repeat center;
-      background-size: none; } }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003352}}
-    .united--sketches {
-      min-height: 700px;
-      width: 100%;
-      display: block;
-      background: url("/img/united--sketches-m.65c4.jpg") no-repeat center center fixed;
-      background-color: #e6e6e6;
-      background-size: cover;
-      margin: 30px 0 0 0; } }
-  @media only screen and (max-width: 960px) and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003352}}
-    .united--sketches {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/united--sketches-m.65c4.jpg") no-repeat center;
-      background-size: none; } }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003361}}
-.united--sketches-u {
-  min-height: 700px;
-  width: 100%;
-  display: block;
-  background: url("/img/united--sketches-u.9c71.jpg") no-repeat center center fixed;
-  background-color: #e6e6e6;
-  background-size: cover;
-  margin: 0 0 20vh 0; }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003361}}
-    .united--sketches-u {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/united--sketches-u.9c71.jpg") no-repeat center;
-      background-size: none; } }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003361}}
-    .united--sketches-u {
-      min-height: 700px;
-      width: 100%;
-      display: block;
-      background: url("/img/united--sketches-u-m.d711.jpg") no-repeat center center fixed;
-      background-color: #e6e6e6;
-      background-size: cover;
-      margin: 0 0 20px 0; } }
-  @media only screen and (max-width: 960px) and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003361}}
-    .united--sketches-u {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/united--sketches-u-m.d711.jpg") no-repeat center;
-      background-size: none; } }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003370}}
-.united--callout {
-  min-height: 700px;
-  width: 100%;
-  display: block;
-  background: url("/img/united--callout.c084.jpg") no-repeat center center fixed;
-  background-color: #e6e6e6;
-  background-size: cover;
-  margin: 20vh 0 20vh 0; }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003370}}
-    .united--callout {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/united--callout.c084.jpg") no-repeat center;
-      background-size: none; } }
-  @media (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003370}}
-    .united--callout {
-      min-height: 700px;
-      width: 100%;
-      display: block;
-      background: url("/img/united--callout-m.eabf.jpg") no-repeat center center fixed;
-      background-color: #e6e6e6;
-      background-size: cover; } }
-  @media only screen and (max-width: 960px) and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003370}}
-    .united--callout {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/united--callout-m.eabf.jpg") no-repeat center;
-      background-size: none; } }
-
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003370}}
-    .united--callout {
-      margin: 20px 0 20px 0;
-      min-height: 700px;
-      width: 100%;
-      display: block;
-      background: url("/img/united--callout-m.eabf.jpg") no-repeat center center fixed;
-      background-color: #e6e6e6;
-      background-size: cover; } }
-  @media only screen and (max-width: 960px) and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003370}}
-    .united--callout {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/united--callout-m.eabf.jpg") no-repeat center;
-      background-size: none; } }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003382}}
-.united--billboard {
-  min-height: 700px;
-  width: 100%;
-  display: block;
-  background: url("/img/united--billboard.27d4.jpg") no-repeat center center fixed;
-  background-color: #e6e6e6;
-  background-size: cover;
-  margin: 20vh 0 0 0; }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003382}}
-    .united--billboard {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/united--billboard.27d4.jpg") no-repeat center;
-      background-size: none; } }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003382}}
-    .united--billboard {
-      margin: 20px 0 0 0;
-      min-height: 700px;
-      width: 100%;
-      display: block;
-      background: url("/img/united--billboard-m.7950.jpg") no-repeat center center fixed;
-      background-color: #e6e6e6;
-      background-size: cover; } }
-  @media only screen and (max-width: 960px) and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003382}}
-    .united--billboard {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/united--billboard-m.7950.jpg") no-repeat center;
-      background-size: none; } }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003391}}
-.united--booklet {
-  min-height: 700px;
-  width: 100%;
-  display: block;
-  background: url("/img/united--booklet.c768.jpg") no-repeat center center fixed;
-  background-color: #e6e6e6;
-  background-size: cover;
-  margin: 0; }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003391}}
-    .united--booklet {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/united--booklet.c768.jpg") no-repeat center;
-      background-size: none; } }
-  @media (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003391}}
-    .united--booklet {
-      min-height: 700px;
-      width: 100%;
-      display: block;
-      background: url("/img/united--booklet-m.6ec3.jpg") no-repeat center center fixed;
-      background-color: #e6e6e6;
-      background-size: cover; } }
-  @media only screen and (max-width: 960px) and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003391}}
-    .united--booklet {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/united--booklet-m.6ec3.jpg") no-repeat center;
-      background-size: none; } }
-
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003391}}
-    .united--booklet {
-      min-height: 700px;
-      width: 100%;
-      display: block;
-      background: url("/img/united--booklet-m.6ec3.jpg") no-repeat center center fixed;
-      background-color: #e6e6e6;
-      background-size: cover;
-      height: 600px; } }
-  @media only screen and (max-width: 960px) and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003391}}
-    .united--booklet {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/united--booklet-m.6ec3.jpg") no-repeat center;
-      background-size: none; } }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003403}}
-.united--bag {
-  min-height: 700px;
-  width: 100%;
-  display: block;
-  background: url("/img/united--bag.02a0.jpg") no-repeat center center fixed;
-  background-color: #e6e6e6;
-  background-size: cover;
-  margin: 0; }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003403}}
-    .united--bag {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/united--bag.02a0.jpg") no-repeat center;
-      background-size: none; } }
-  @media (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003403}}
-    .united--bag {
-      min-height: 700px;
-      width: 100%;
-      display: block;
-      background: url("/img/united--bag-m.7246.jpg") no-repeat center center fixed;
-      background-color: #e6e6e6;
-      background-size: cover;
-      height: 500px; } }
-  @media only screen and (max-width: 960px) and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003403}}
-    .united--bag {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/united--bag-m.7246.jpg") no-repeat center;
-      background-size: none; } }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003412}}
-.united--stationery {
-  min-height: 700px;
-  width: 100%;
-  display: block;
-  background: url("/img/united--stationery.6b04.jpg") no-repeat center center fixed;
-  background-color: #e6e6e6;
-  background-size: cover;
-  margin: 0 0 0 0; }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003412}}
-    .united--stationery {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/united--stationery.6b04.jpg") no-repeat center;
-      background-size: none; } }
-  @media (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003412}}
-    .united--stationery {
-      min-height: 700px;
-      width: 100%;
-      display: block;
-      background: url("/img/united--plane.65c0.jpg") no-repeat center center fixed;
-      background-color: #e6e6e6;
-      background-size: cover; } }
-  @media only screen and (max-width: 960px) and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003412}}
-    .united--stationery {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/united--plane.65c0.jpg") no-repeat center;
-      background-size: none; } }
-
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003412}}
-    .united--stationery {
-      min-height: 700px;
-      width: 100%;
-      display: block;
-      background: url("/img/united--plane.65c0.jpg") no-repeat center center fixed;
-      background-color: #e6e6e6;
-      background-size: cover;
-      margin: 0 0 20px 0; } }
-  @media only screen and (max-width: 960px) and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003412}}
-    .united--stationery {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/united--plane.65c0.jpg") no-repeat center;
-      background-size: none; } }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003424}}
-.united--app-sketches {
-  min-height: 700px;
-  width: 100%;
-  display: block;
-  background: url("/img/united--app-sketches.9b6e.jpg") no-repeat center center fixed;
-  background-color: #e6e6e6;
-  background-size: cover;
-  margin: 20vh 0 0 0; }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003424}}
-    .united--app-sketches {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/united--app-sketches.9b6e.jpg") no-repeat center;
-      background-size: none; } }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003424}}
-    .united--app-sketches {
-      min-height: 700px;
-      width: 100%;
-      display: block;
-      background: url("/img/united--app-sketches-m.17ad.jpg") no-repeat center center fixed;
-      background-color: #e6e6e6;
-      background-size: cover;
-      margin: 20px 0 0 0; } }
-  @media only screen and (max-width: 960px) and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003424}}
-    .united--app-sketches {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/united--app-sketches-m.17ad.jpg") no-repeat center;
-      background-size: none; } }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003433}}
-.united--app-wireframes {
-  min-height: 700px;
-  width: 100%;
-  display: block;
-  background: url("/img/united--app-wireframes.3f44.jpg") no-repeat center center fixed;
-  background-color: #e6e6e6;
-  background-size: cover;
-  margin: 0 0 20vh 0; }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003433}}
-    .united--app-wireframes {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/united--app-wireframes.3f44.jpg") no-repeat center;
-      background-size: none; } }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003433}}
-    .united--app-wireframes {
-      min-height: 700px;
-      width: 100%;
-      display: block;
-      background: url("/img/united--app-wireframes-m.2e23.jpg") no-repeat center center fixed;
-      background-color: #e6e6e6;
-      background-size: cover;
-      margin: 0;
-      min-height: 375px !important; } }
-  @media only screen and (max-width: 960px) and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003433}}
-    .united--app-wireframes {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/united--app-wireframes-m.2e23.jpg") no-repeat center;
-      background-size: none; } }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003443}}
-.united--app-screen-login {
-  min-height: 700px;
-  width: 100%;
-  display: block;
-  background: url("/img/united--app-screen-login.f294.gif") no-repeat center center fixed;
-  background-color: #e6e6e6;
-  background-size: cover;
-  margin: 20vh 0 20vh 0; }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003443}}
-    .united--app-screen-login {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/united--app-screen-login.f294.gif") no-repeat center;
-      background-size: none; } }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003443}}
-    .united--app-screen-login {
-      min-height: 700px;
-      width: 100%;
-      display: block;
-      background: url("/img/united--app-screen-login-m.38c3.gif") no-repeat center center fixed;
-      background-color: #e6e6e6;
-      background-size: cover;
-      margin: 20px 0 20px 0;
-      min-height: 275px !important; } }
-  @media only screen and (max-width: 960px) and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003443}}
-    .united--app-screen-login {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/united--app-screen-login-m.38c3.gif") no-repeat center;
-      background-size: none; } }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003453}}
-.united--app-weather {
-  min-height: 700px;
-  width: 100%;
-  display: block;
-  background: url("/img/united--app-weather.6a1b.jpg") no-repeat center center fixed;
-  background-color: #e6e6e6;
-  background-size: cover;
-  margin: 20vh 0 20vh 0; }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003453}}
-    .united--app-weather {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/united--app-weather.6a1b.jpg") no-repeat center;
-      background-size: none; } }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003453}}
-    .united--app-weather {
-      min-height: 700px;
-      width: 100%;
-      display: block;
-      background: url("/img/united--app-weather-m.5986.jpg") no-repeat center center fixed;
-      background-color: #e6e6e6;
-      background-size: cover;
-      margin: 20px 0 20px 0;
-      height: 600px; } }
-  @media only screen and (max-width: 960px) and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003453}}
-    .united--app-weather {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/united--app-weather-m.5986.jpg") no-repeat center;
-      background-size: none; } }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003463}}
-.united--app-video {
-  margin: 20vh 0 20vh 0; }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003463}}
-    .united--app-video {
-      margin: 20px 0 20px 0; } }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003470}}
-.well-made--proposal {
-  min-height: 700px;
-  width: 100%;
-  display: block;
-  background: url("/img/well-made--proposal.35d5.jpg") no-repeat center center fixed;
-  background-color: #e6e6e6;
-  background-size: cover;
-  margin: 0 0 20vh 0; }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003470}}
-    .well-made--proposal {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/well-made--proposal.35d5.jpg") no-repeat center;
-      background-size: none; } }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003470}}
-    .well-made--proposal {
-      min-height: 700px;
-      width: 100%;
-      display: block;
-      background: url("/img/well-made--proposal-m.a858.jpg") no-repeat center center fixed;
-      background-color: #e6e6e6;
-      background-size: cover;
-      margin: 20px 0 20px 0; } }
-  @media only screen and (max-width: 960px) and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003470}}
-    .well-made--proposal {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/well-made--proposal-m.a858.jpg") no-repeat center;
-      background-size: none; } }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003479}}
-.well-made--sketches {
-  min-height: 700px;
-  width: 100%;
-  display: block;
-  background: url("/img/well-made--sketches.602e.jpg") no-repeat center center fixed;
-  background-color: #e6e6e6;
-  background-size: cover;
-  margin: 20vh 0 0 0; }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003479}}
-    .well-made--sketches {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/well-made--sketches.602e.jpg") no-repeat center;
-      background-size: none; } }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003479}}
-    .well-made--sketches {
-      min-height: 700px;
-      width: 100%;
-      display: block;
-      background: url("/img/well-made--sketches-m.6678.jpg") no-repeat center center fixed;
-      background-color: #e6e6e6;
-      background-size: cover;
-      margin: 20px 0 0 0; } }
-  @media only screen and (max-width: 960px) and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003479}}
-    .well-made--sketches {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/well-made--sketches-m.6678.jpg") no-repeat center;
-      background-size: none; } }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003488}}
-.well-made--sketches-system {
-  min-height: 700px;
-  width: 100%;
-  display: block;
-  background: url("/img/well-made--sketches-system.06cf.jpg") no-repeat center center fixed;
-  background-color: #e6e6e6;
-  background-size: cover;
-  margin: 0 0 20vh 0; }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003488}}
-    .well-made--sketches-system {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/well-made--sketches-system.06cf.jpg") no-repeat center;
-      background-size: none; } }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003488}}
-    .well-made--sketches-system {
-      min-height: 700px;
-      width: 100%;
-      display: block;
-      background: url("/img/well-made--sketches-system-m.b668.jpg") no-repeat center center fixed;
-      background-color: #e6e6e6;
-      background-size: cover;
-      margin: 0 0 20px 0; } }
-  @media only screen and (max-width: 960px) and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003488}}
-    .well-made--sketches-system {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/well-made--sketches-system-m.b668.jpg") no-repeat center;
-      background-size: none; } }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003497}}
-.well-made--callout {
-  min-height: 700px;
-  width: 100%;
-  display: block;
-  background: url("/img/well-made--callout.2aa3.jpg") no-repeat center center fixed;
-  background-color: #e6e6e6;
-  background-size: cover;
-  margin: 20vh 0 20vh 0; }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003497}}
-    .well-made--callout {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/well-made--callout.2aa3.jpg") no-repeat center;
-      background-size: none; } }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003497}}
-    .well-made--callout {
-      margin: 20px 0 20px 0;
-      min-height: 700px;
-      width: 100%;
-      display: block;
-      background: url("/img/well-made--callout-m.c8f1.jpg") no-repeat center center fixed;
-      background-color: #e6e6e6;
-      background-size: cover; } }
-  @media only screen and (max-width: 960px) and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003497}}
-    .well-made--callout {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/well-made--callout-m.c8f1.jpg") no-repeat center;
-      background-size: none; } }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003506}}
-.well-made--tag {
-  min-height: 700px;
-  width: 100%;
-  display: block;
-  background: url("/img/well-made--tag.bc76.jpg") no-repeat center center fixed;
-  background-color: #e6e6e6;
-  background-size: cover;
-  margin: 20vh 0 20vh 0; }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003506}}
-    .well-made--tag {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/well-made--tag.bc76.jpg") no-repeat center;
-      background-size: none; } }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003506}}
-    .well-made--tag {
-      margin: 20px 0 20px 0;
-      min-height: 700px;
-      width: 100%;
-      display: block;
-      background: url("/img/well-made--tag-m.939d.jpg") no-repeat center center fixed;
-      background-color: #e6e6e6;
-      background-size: cover;
-      height: 450px; } }
-  @media only screen and (max-width: 960px) and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003506}}
-    .well-made--tag {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/well-made--tag-m.939d.jpg") no-repeat center;
-      background-size: none; } }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003516}}
-.well-made--tube {
-  min-height: 700px;
-  width: 100%;
-  display: block;
-  background: url("/img/well-made--tube.ed84.jpg") no-repeat center center fixed;
-  background-color: #e6e6e6;
-  background-size: cover;
-  margin: 20vh 0 20vh 0; }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003516}}
-    .well-made--tube {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/well-made--tube.ed84.jpg") no-repeat center;
-      background-size: none; } }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003516}}
-    .well-made--tube {
-      margin: 20px 0 20px 0;
-      min-height: 700px;
-      width: 100%;
-      display: block;
-      background: url("/img/well-made--tube-m.8d51.jpg") no-repeat center center fixed;
-      background-color: #e6e6e6;
-      background-size: cover;
-      height: 450px; } }
-  @media only screen and (max-width: 960px) and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003516}}
-    .well-made--tube {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/well-made--tube-m.8d51.jpg") no-repeat center;
-      background-size: none; } }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003526}}
-.well-made--tube-backpack {
-  min-height: 700px;
-  width: 100%;
-  display: block;
-  background: url("/img/well-made--tube-backpack.0251.jpg") no-repeat center center fixed;
-  background-color: #e6e6e6;
-  background-size: cover;
-  margin: 20vh 0 20vh 0; }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003526}}
-    .well-made--tube-backpack {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/well-made--tube-backpack.0251.jpg") no-repeat center;
-      background-size: none; } }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003526}}
-    .well-made--tube-backpack {
-      margin: 20px 0 20px 0;
-      min-height: 700px;
-      width: 100%;
-      display: block;
-      background: url("/img/well-made--tube-backpack-m.454e.jpg") no-repeat center center fixed;
-      background-color: #e6e6e6;
-      background-size: cover;
-      height: 650px; } }
-  @media only screen and (max-width: 960px) and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003526}}
-    .well-made--tube-backpack {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/well-made--tube-backpack-m.454e.jpg") no-repeat center;
-      background-size: none; } }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003536}}
-.well-made--store-bag-1 {
-  min-height: 700px;
-  width: 100%;
-  display: block;
-  background: url("/img/well-made--store-bag.0f3a.jpg") no-repeat center center fixed;
-  background-color: #e6e6e6;
-  background-size: cover;
-  margin: 20vh 0 0 0; }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003536}}
-    .well-made--store-bag-1 {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/well-made--store-bag.0f3a.jpg") no-repeat center;
-      background-size: none; } }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003536}}
-    .well-made--store-bag-1 {
-      margin: 20px 0 0 0;
-      min-height: 700px;
-      width: 100%;
-      display: block;
-      background: url("/img/well-made--store-bag-m.22cb.jpg") no-repeat center center fixed;
-      background-color: #e6e6e6;
-      background-size: cover;
-      height: 500px; } }
-  @media only screen and (max-width: 960px) and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003536}}
-    .well-made--store-bag-1 {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/well-made--store-bag-m.22cb.jpg") no-repeat center;
-      background-size: none; } }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003546}}
-.well-made--store-bag-2 {
-  min-height: 700px;
-  width: 100%;
-  display: block;
-  background: url("/img/well-made--store-bag-2.d67c.jpg") no-repeat center center fixed;
-  background-color: #e6e6e6;
-  background-size: cover;
-  margin: 0; }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003546}}
-    .well-made--store-bag-2 {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/well-made--store-bag-2.d67c.jpg") no-repeat center;
-      background-size: none; } }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003546}}
-    .well-made--store-bag-2 {
-      min-height: 700px;
-      width: 100%;
-      display: block;
-      background: url("/img/well-made--store-bag-2-m.2b5c.jpg") no-repeat center center fixed;
-      background-color: #e6e6e6;
-      background-size: cover;
-      min-height: 320px; } }
-  @media only screen and (max-width: 960px) and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003546}}
-    .well-made--store-bag-2 {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/well-made--store-bag-2-m.2b5c.jpg") no-repeat center;
-      background-size: none; } }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003555}}
-.well-made--store-bag-3 {
-  min-height: 700px;
-  width: 100%;
-  display: block;
-  background: url("/img/well-made--store-bag-3.4440.jpg") no-repeat center center fixed;
-  background-color: #e6e6e6;
-  background-size: cover;
-  margin: 0; }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003555}}
-    .well-made--store-bag-3 {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/well-made--store-bag-3.4440.jpg") no-repeat center;
-      background-size: none; } }
-  @media only screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003555}}
-    .well-made--store-bag-3 {
-      margin: 0;
-      min-height: 700px;
-      width: 100%;
-      display: block;
-      background: url("/img/well-made--store-bag-3-m.407f.jpg") no-repeat center center fixed;
-      background-color: #e6e6e6;
-      background-size: cover;
-      min-height: 320px; } }
-  @media only screen and (max-width: 960px) and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/helenholmes\/code\/portfolio\/app\/_scss\/_posts\.scss}line{font-family:\00003555}}
-    .well-made--store-bag-3 {
-      min-height: 320px;
-      width: 100%;
-      background: url("/img/well-made--store-bag-3-m.407f.jpg") no-repeat center;
-      background-size: none; } }
+#container {
+  margin: 0 auto;
+  max-width: 480px;
+  padding: 0 7px; }
+  #container .nav {
+    margin: 25px 0 0 0;
+    height: 24px;
+    text-transform: uppercase;
+    font-size: 16px;
+    width: 100%; }
+    #container .nav a {
+      color: #AD141E;
+      text-decoration: none; }
+    #container .nav a:hover {
+      text-decoration: underline; }
+  #container #content {
+    font: 400 16px/24px helvetica neue, sans-serif; }
+    #container #content a {
+      color: #AD141E; }
+    #container #content h1 {
+      font: 700 30px/50px helvetica neue, sans-serif;
+      padding-top: 10px; }
+      #container #content h1 a {
+        color: #000;
+        text-decoration: none; }
+    #container #content h2 {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 25px 0;
+      clear: both;
+      border-top: 1px solid #ddd;
+      padding-top: 10px; }
+    #container #content h3 {
+      font-size: 14px; }
+    #container #content p {
+      margin: 1em 0; }
+    #container #content pre {
+      overflow: auto;
+      background: #333;
+      color: #fff;
+      padding: 10px;
+      font-family: Monaco, Consolas, "Courier New", Courier, Sans-serif; }
+      #container #content pre code {
+        background: #333; }
+    #container #content code {
+      background: #eee;
+      padding: 2px; }
+    #container #content tt {
+      display: inline; }
+    #container #content ul, #container #content ol {
+      padding-top: 10px;
+      margin-left: 30px;
+      list-style: square; }
+      #container #content ul li, #container #content ol li {
+        padding-bottom: 0px; }
+    #container #content ol {
+      list-style: decimal; }
+  #container footer {
+    margin: 50px 0;
+    text-align: center; }
+    #container footer p {
+      color: #666;
+      font: 400 14px "proxima-nova-1", "proxima-nova-2", "museo-sans-1", "museo-sans-2", helvetica neue, sans-serif; }
+      #container footer p a, #container footer p a:visited, #container footer p a:link {
+        color: #666; }
+#container ul.nav {
+  display: none; }
 </style>
 </head>
-<body>
-<a href="/"><div class="post--navigation"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAACXBIWXMAAAsT%0AAAALEwEAmpwYAAAKT2lDQ1BQaG90b3Nob3AgSUNDIHByb2ZpbGUAAHjanVNn%0AVFPpFj333vRCS4iAlEtvUhUIIFJCi4AUkSYqIQkQSoghodkVUcERRUUEG8ig%0AiAOOjoCMFVEsDIoK2AfkIaKOg6OIisr74Xuja9a89+bN/rXXPues852zzwfA%0ACAyWSDNRNYAMqUIeEeCDx8TG4eQuQIEKJHAAEAizZCFz/SMBAPh+PDwrIsAH%0AvgABeNMLCADATZvAMByH/w/qQplcAYCEAcB0kThLCIAUAEB6jkKmAEBGAYCd%0AmCZTAKAEAGDLY2LjAFAtAGAnf+bTAICd+Jl7AQBblCEVAaCRACATZYhEAGg7%0AAKzPVopFAFgwABRmS8Q5ANgtADBJV2ZIALC3AMDOEAuyAAgMADBRiIUpAAR7%0AAGDIIyN4AISZABRG8lc88SuuEOcqAAB4mbI8uSQ5RYFbCC1xB1dXLh4ozkkX%0AKxQ2YQJhmkAuwnmZGTKBNA/g88wAAKCRFRHgg/P9eM4Ors7ONo62Dl8t6r8G%0A/yJiYuP+5c+rcEAAAOF0ftH+LC+zGoA7BoBt/qIl7gRoXgugdfeLZrIPQLUA%0AoOnaV/Nw+H48PEWhkLnZ2eXk5NhKxEJbYcpXff5nwl/AV/1s+X48/Pf14L7i%0AJIEyXYFHBPjgwsz0TKUcz5IJhGLc5o9H/LcL//wd0yLESWK5WCoU41EScY5E%0AmozzMqUiiUKSKcUl0v9k4t8s+wM+3zUAsGo+AXuRLahdYwP2SycQWHTA4vcA%0AAPK7b8HUKAgDgGiD4c93/+8//UegJQCAZkmScQAAXkQkLlTKsz/HCAAARKCB%0AKrBBG/TBGCzABhzBBdzBC/xgNoRCJMTCQhBCCmSAHHJgKayCQiiGzbAdKmAv%0A1EAdNMBRaIaTcA4uwlW4Dj1wD/phCJ7BKLyBCQRByAgTYSHaiAFiilgjjggX%0AmYX4IcFIBBKLJCDJiBRRIkuRNUgxUopUIFVIHfI9cgI5h1xGupE7yAAygvyG%0AvEcxlIGyUT3UDLVDuag3GoRGogvQZHQxmo8WoJvQcrQaPYw2oefQq2gP2o8+%0AQ8cwwOgYBzPEbDAuxsNCsTgsCZNjy7EirAyrxhqwVqwDu4n1Y8+xdwQSgUXA%0ACTYEd0IgYR5BSFhMWE7YSKggHCQ0EdoJNwkDhFHCJyKTqEu0JroR+cQYYjIx%0Ah1hILCPWEo8TLxB7iEPENyQSiUMyJ7mQAkmxpFTSEtJG0m5SI+ksqZs0SBoj%0Ak8naZGuyBzmULCAryIXkneTD5DPkG+Qh8lsKnWJAcaT4U+IoUspqShnlEOU0%0A5QZlmDJBVaOaUt2ooVQRNY9aQq2htlKvUYeoEzR1mjnNgxZJS6WtopXTGmgX%0AaPdpr+h0uhHdlR5Ol9BX0svpR+iX6AP0dwwNhhWDx4hnKBmbGAcYZxl3GK+Y%0ATKYZ04sZx1QwNzHrmOeZD5lvVVgqtip8FZHKCpVKlSaVGyovVKmqpqreqgtV%0A81XLVI+pXlN9rkZVM1PjqQnUlqtVqp1Q61MbU2epO6iHqmeob1Q/pH5Z/YkG%0AWcNMw09DpFGgsV/jvMYgC2MZs3gsIWsNq4Z1gTXEJrHN2Xx2KruY/R27iz2q%0AqaE5QzNKM1ezUvOUZj8H45hx+Jx0TgnnKKeX836K3hTvKeIpG6Y0TLkxZVxr%0AqpaXllirSKtRq0frvTau7aedpr1Fu1n7gQ5Bx0onXCdHZ4/OBZ3nU9lT3acK%0ApxZNPTr1ri6qa6UbobtEd79up+6Ynr5egJ5Mb6feeb3n+hx9L/1U/W36p/VH%0ADFgGswwkBtsMzhg8xTVxbzwdL8fb8VFDXcNAQ6VhlWGX4YSRudE8o9VGjUYP%0AjGnGXOMk423GbcajJgYmISZLTepN7ppSTbmmKaY7TDtMx83MzaLN1pk1mz0x%0A1zLnm+eb15vft2BaeFostqi2uGVJsuRaplnutrxuhVo5WaVYVVpds0atna0l%0A1rutu6cRp7lOk06rntZnw7Dxtsm2qbcZsOXYBtuutm22fWFnYhdnt8Wuw+6T%0AvZN9un2N/T0HDYfZDqsdWh1+c7RyFDpWOt6azpzuP33F9JbpL2dYzxDP2DPj%0AthPLKcRpnVOb00dnF2e5c4PziIuJS4LLLpc+Lpsbxt3IveRKdPVxXeF60vWd%0Am7Obwu2o26/uNu5p7ofcn8w0nymeWTNz0MPIQ+BR5dE/C5+VMGvfrH5PQ0+B%0AZ7XnIy9jL5FXrdewt6V3qvdh7xc+9j5yn+M+4zw33jLeWV/MN8C3yLfLT8Nv%0Anl+F30N/I/9k/3r/0QCngCUBZwOJgUGBWwL7+Hp8Ib+OPzrbZfay2e1BjKC5%0AQRVBj4KtguXBrSFoyOyQrSH355jOkc5pDoVQfujW0Adh5mGLw34MJ4WHhVeG%0AP45wiFga0TGXNXfR3ENz30T6RJZE3ptnMU85ry1KNSo+qi5qPNo3ujS6P8Yu%0AZlnM1VidWElsSxw5LiquNm5svt/87fOH4p3iC+N7F5gvyF1weaHOwvSFpxap%0ALhIsOpZATIhOOJTwQRAqqBaMJfITdyWOCnnCHcJnIi/RNtGI2ENcKh5O8kgq%0ATXqS7JG8NXkkxTOlLOW5hCepkLxMDUzdmzqeFpp2IG0yPTq9MYOSkZBxQqoh%0ATZO2Z+pn5mZ2y6xlhbL+xW6Lty8elQfJa7OQrAVZLQq2QqboVFoo1yoHsmdl%0AV2a/zYnKOZarnivN7cyzytuQN5zvn//tEsIS4ZK2pYZLVy0dWOa9rGo5sjxx%0AedsK4xUFK4ZWBqw8uIq2Km3VT6vtV5eufr0mek1rgV7ByoLBtQFr6wtVCuWF%0Afevc1+1dT1gvWd+1YfqGnRs+FYmKrhTbF5cVf9go3HjlG4dvyr+Z3JS0qavE%0AuWTPZtJm6ebeLZ5bDpaql+aXDm4N2dq0Dd9WtO319kXbL5fNKNu7g7ZDuaO/%0APLi8ZafJzs07P1SkVPRU+lQ27tLdtWHX+G7R7ht7vPY07NXbW7z3/T7JvttV%0AAVVN1WbVZftJ+7P3P66Jqun4lvttXa1ObXHtxwPSA/0HIw6217nU1R3SPVRS%0Aj9Yr60cOxx++/p3vdy0NNg1VjZzG4iNwRHnk6fcJ3/ceDTradox7rOEH0x92%0AHWcdL2pCmvKaRptTmvtbYlu6T8w+0dbq3nr8R9sfD5w0PFl5SvNUyWna6YLT%0Ak2fyz4ydlZ19fi753GDborZ752PO32oPb++6EHTh0kX/i+c7vDvOXPK4dPKy%0A2+UTV7hXmq86X23qdOo8/pPTT8e7nLuarrlca7nuer21e2b36RueN87d9L15%0A8Rb/1tWeOT3dvfN6b/fF9/XfFt1+cif9zsu72Xcn7q28T7xf9EDtQdlD3YfV%0AP1v+3Njv3H9qwHeg89HcR/cGhYPP/pH1jw9DBY+Zj8uGDYbrnjg+OTniP3L9%0A6fynQ89kzyaeF/6i/suuFxYvfvjV69fO0ZjRoZfyl5O/bXyl/erA6xmv28bC%0Axh6+yXgzMV70VvvtwXfcdx3vo98PT+R8IH8o/2j5sfVT0Kf7kxmTk/8EA5jz%0A/GMzLdsAAAAgY0hSTQAAeiUAAICDAAD5/wAAgOkAAHUwAADqYAAAOpgAABdv%0Akl/FRgAAAXFJREFUeNrsli1PA0EQhp8jVwIhOVEEGofCgSoNEoNrwk9A40j4%0AEYgqDKYGJFhcRS0CQ1UpaZAVNVxa8WJmk8lx2zYNFEjYZDK7M+987Ozt7CWS%0A+O6xwhLGUoKkbn4CXEZwI2CnRP4MZBGbM+B2aTtBUqCKpMyoK+lN0oWTUUJB%0Ad2H4rpNVAs7vZGJlGQHhk8udDGAbuDKO0+UhZyebzHPwAnpu3QAegGPjDafr%0AucSmlstTW9KBzTckNa0cRWqaHsO3y/wxpdZI2pXUcU7vJe0bD7KO4YidXSxI%0AIulUUt8cDSSdS0pNn9p6YPq+4ZN5g2xKarlMHyXVIsnUTB+wLbP/FCRzVC8Y%0A3UmqRgIEqhrOJ1X3flO7tbHRBoYzrtrQcHu23gJuZvWuF2C84N0eA69lvavY%0Ak96BJ2B1gSA5cFi0Td1t/qqRuw7wM62+AqzbPDG+5lp52Y4zhwt2mSv7BCBx%0Az+8RcP1n35Pk/0fi1wX5GAC7cSG/quYQOgAAAABJRU5ErkJggg==%0A"></div></a><div class="post post-content">
-<div class="post--intro">
-<p>Well Made Co. is a camping company that prides itself in well-made products and eco-friendly everything by creating products that last forever. The client wanted the packaging that those products come in to also live longer than long enough to dump into a trash can. The project called for us to create useful second lives for the packaging beyond informing customers about the product.</p>
-<p>The problem was dual-fold: they needed a logo design that fit their quaint, rustic personality, and they needed packaging that could be useful on the campsite or while hiking. The project involved a lot of visual explortion to hone in on how to represent that visually so that customers would understand what Well Made Co. was all about.</p>
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAbCAYAAACJISRoAAAACXBIWXMAAAsT%0AAAALEwEAmpwYAAAKT2lDQ1BQaG90b3Nob3AgSUNDIHByb2ZpbGUAAHjanVNn%0AVFPpFj333vRCS4iAlEtvUhUIIFJCi4AUkSYqIQkQSoghodkVUcERRUUEG8ig%0AiAOOjoCMFVEsDIoK2AfkIaKOg6OIisr74Xuja9a89+bN/rXXPues852zzwfA%0ACAyWSDNRNYAMqUIeEeCDx8TG4eQuQIEKJHAAEAizZCFz/SMBAPh+PDwrIsAH%0AvgABeNMLCADATZvAMByH/w/qQplcAYCEAcB0kThLCIAUAEB6jkKmAEBGAYCd%0AmCZTAKAEAGDLY2LjAFAtAGAnf+bTAICd+Jl7AQBblCEVAaCRACATZYhEAGg7%0AAKzPVopFAFgwABRmS8Q5ANgtADBJV2ZIALC3AMDOEAuyAAgMADBRiIUpAAR7%0AAGDIIyN4AISZABRG8lc88SuuEOcqAAB4mbI8uSQ5RYFbCC1xB1dXLh4ozkkX%0AKxQ2YQJhmkAuwnmZGTKBNA/g88wAAKCRFRHgg/P9eM4Ors7ONo62Dl8t6r8G%0A/yJiYuP+5c+rcEAAAOF0ftH+LC+zGoA7BoBt/qIl7gRoXgugdfeLZrIPQLUA%0AoOnaV/Nw+H48PEWhkLnZ2eXk5NhKxEJbYcpXff5nwl/AV/1s+X48/Pf14L7i%0AJIEyXYFHBPjgwsz0TKUcz5IJhGLc5o9H/LcL//wd0yLESWK5WCoU41EScY5E%0AmozzMqUiiUKSKcUl0v9k4t8s+wM+3zUAsGo+AXuRLahdYwP2SycQWHTA4vcA%0AAPK7b8HUKAgDgGiD4c93/+8//UegJQCAZkmScQAAXkQkLlTKsz/HCAAARKCB%0AKrBBG/TBGCzABhzBBdzBC/xgNoRCJMTCQhBCCmSAHHJgKayCQiiGzbAdKmAv%0A1EAdNMBRaIaTcA4uwlW4Dj1wD/phCJ7BKLyBCQRByAgTYSHaiAFiilgjjggX%0AmYX4IcFIBBKLJCDJiBRRIkuRNUgxUopUIFVIHfI9cgI5h1xGupE7yAAygvyG%0AvEcxlIGyUT3UDLVDuag3GoRGogvQZHQxmo8WoJvQcrQaPYw2oefQq2gP2o8+%0AQ8cwwOgYBzPEbDAuxsNCsTgsCZNjy7EirAyrxhqwVqwDu4n1Y8+xdwQSgUXA%0ACTYEd0IgYR5BSFhMWE7YSKggHCQ0EdoJNwkDhFHCJyKTqEu0JroR+cQYYjIx%0Ah1hILCPWEo8TLxB7iEPENyQSiUMyJ7mQAkmxpFTSEtJG0m5SI+ksqZs0SBoj%0Ak8naZGuyBzmULCAryIXkneTD5DPkG+Qh8lsKnWJAcaT4U+IoUspqShnlEOU0%0A5QZlmDJBVaOaUt2ooVQRNY9aQq2htlKvUYeoEzR1mjnNgxZJS6WtopXTGmgX%0AaPdpr+h0uhHdlR5Ol9BX0svpR+iX6AP0dwwNhhWDx4hnKBmbGAcYZxl3GK+Y%0ATKYZ04sZx1QwNzHrmOeZD5lvVVgqtip8FZHKCpVKlSaVGyovVKmqpqreqgtV%0A81XLVI+pXlN9rkZVM1PjqQnUlqtVqp1Q61MbU2epO6iHqmeob1Q/pH5Z/YkG%0AWcNMw09DpFGgsV/jvMYgC2MZs3gsIWsNq4Z1gTXEJrHN2Xx2KruY/R27iz2q%0AqaE5QzNKM1ezUvOUZj8H45hx+Jx0TgnnKKeX836K3hTvKeIpG6Y0TLkxZVxr%0AqpaXllirSKtRq0frvTau7aedpr1Fu1n7gQ5Bx0onXCdHZ4/OBZ3nU9lT3acK%0ApxZNPTr1ri6qa6UbobtEd79up+6Ynr5egJ5Mb6feeb3n+hx9L/1U/W36p/VH%0ADFgGswwkBtsMzhg8xTVxbzwdL8fb8VFDXcNAQ6VhlWGX4YSRudE8o9VGjUYP%0AjGnGXOMk423GbcajJgYmISZLTepN7ppSTbmmKaY7TDtMx83MzaLN1pk1mz0x%0A1zLnm+eb15vft2BaeFostqi2uGVJsuRaplnutrxuhVo5WaVYVVpds0atna0l%0A1rutu6cRp7lOk06rntZnw7Dxtsm2qbcZsOXYBtuutm22fWFnYhdnt8Wuw+6T%0AvZN9un2N/T0HDYfZDqsdWh1+c7RyFDpWOt6azpzuP33F9JbpL2dYzxDP2DPj%0AthPLKcRpnVOb00dnF2e5c4PziIuJS4LLLpc+Lpsbxt3IveRKdPVxXeF60vWd%0Am7Obwu2o26/uNu5p7ofcn8w0nymeWTNz0MPIQ+BR5dE/C5+VMGvfrH5PQ0+B%0AZ7XnIy9jL5FXrdewt6V3qvdh7xc+9j5yn+M+4zw33jLeWV/MN8C3yLfLT8Nv%0Anl+F30N/I/9k/3r/0QCngCUBZwOJgUGBWwL7+Hp8Ib+OPzrbZfay2e1BjKC5%0AQRVBj4KtguXBrSFoyOyQrSH355jOkc5pDoVQfujW0Adh5mGLw34MJ4WHhVeG%0AP45wiFga0TGXNXfR3ENz30T6RJZE3ptnMU85ry1KNSo+qi5qPNo3ujS6P8Yu%0AZlnM1VidWElsSxw5LiquNm5svt/87fOH4p3iC+N7F5gvyF1weaHOwvSFpxap%0ALhIsOpZATIhOOJTwQRAqqBaMJfITdyWOCnnCHcJnIi/RNtGI2ENcKh5O8kgq%0ATXqS7JG8NXkkxTOlLOW5hCepkLxMDUzdmzqeFpp2IG0yPTq9MYOSkZBxQqoh%0ATZO2Z+pn5mZ2y6xlhbL+xW6Lty8elQfJa7OQrAVZLQq2QqboVFoo1yoHsmdl%0AV2a/zYnKOZarnivN7cyzytuQN5zvn//tEsIS4ZK2pYZLVy0dWOa9rGo5sjxx%0AedsK4xUFK4ZWBqw8uIq2Km3VT6vtV5eufr0mek1rgV7ByoLBtQFr6wtVCuWF%0Afevc1+1dT1gvWd+1YfqGnRs+FYmKrhTbF5cVf9go3HjlG4dvyr+Z3JS0qavE%0AuWTPZtJm6ebeLZ5bDpaql+aXDm4N2dq0Dd9WtO319kXbL5fNKNu7g7ZDuaO/%0APLi8ZafJzs07P1SkVPRU+lQ27tLdtWHX+G7R7ht7vPY07NXbW7z3/T7JvttV%0AAVVN1WbVZftJ+7P3P66Jqun4lvttXa1ObXHtxwPSA/0HIw6217nU1R3SPVRS%0Aj9Yr60cOxx++/p3vdy0NNg1VjZzG4iNwRHnk6fcJ3/ceDTradox7rOEH0x92%0AHWcdL2pCmvKaRptTmvtbYlu6T8w+0dbq3nr8R9sfD5w0PFl5SvNUyWna6YLT%0Ak2fyz4ydlZ19fi753GDborZ752PO32oPb++6EHTh0kX/i+c7vDvOXPK4dPKy%0A2+UTV7hXmq86X23qdOo8/pPTT8e7nLuarrlca7nuer21e2b36RueN87d9L15%0A8Rb/1tWeOT3dvfN6b/fF9/XfFt1+cif9zsu72Xcn7q28T7xf9EDtQdlD3YfV%0AP1v+3Njv3H9qwHeg89HcR/cGhYPP/pH1jw9DBY+Zj8uGDYbrnjg+OTniP3L9%0A6fynQ89kzyaeF/6i/suuFxYvfvjV69fO0ZjRoZfyl5O/bXyl/erA6xmv28bC%0Axh6+yXgzMV70VvvtwXfcdx3vo98PT+R8IH8o/2j5sfVT0Kf7kxmTk/8EA5jz%0A/GMzLdsAAAAgY0hSTQAAeiUAAICDAAD5/wAAgOkAAHUwAADqYAAAOpgAABdv%0Akl/FRgAAAgtJREFUeNq0lsuLTnEYx9+MS0guaWoW7lLGwo769KkpC9cFq0lZ%0ASkk2UkqhRINiZzONchk0JTViptkMMkyI0Ru5JZcJSUr+gmPzvHUc7+XM+76z%0A+C7O7/J8zvmd5/k+v0KSJIXJViFJkgJYS4vBg+AlsB+8DB4Cl9famwcyAzwG%0A3gC/gG/Bl+AbcBy8CZ4EZ9cLOQC+A4fAveAqcHrMTQNXgrtj/gN4eKKQwQDs%0AyHGUBXAr+Bq8C7bkgTwAR3MGz2oYfFUL0gOO1QkoaQTsqwTZCP6p9hNzagr4%0Aq3TUWcgYuK9BQEm7IgP/gQC+aBKgpOfgtjTkAtibWbQBPJsz4Clwc2asB7ye%0AhvSD+zOLFoHvo8qrAc6Dn8BlmfGd4EAach9cXybAzCi07gqAc1H5c8vMtYMj%0AachTcHWFQHPAz/HG6fHT4FdwQYV9K8An2S9ZV+VI5oPfwTPxfAT8AbZW2dMO%0APkxDbuVI34WRMY8iE9tqrO8EB9OQi+CVHFnUFv60NMfabrAvDelogp1k9Qzc%0Anq34IrinSYDOSP//bGUL+DsaVaOQnwEq68K94OMGAcNR3FX7STF+bj2AO+BH%0AcGotSAt4LzrdppzBO6L3j4KzJtLjj4ZlDIV1LynjbZ3RqsfBrnpvK/PCPm5H%0AxRcjNYvgN3AgnLq1kStRSWvA4+DVuAZdA0+Aa3PfuyZbfwcA1S8WW/dIkd0A%0AAAAASUVORK5CYII=%0A" class="down">
-</div>
-<div class="well-made--proposal"></div>
-<p>Well Made Co. came with lots of visuals that they liked and looked to us for how they could translate that into a brand. After a lot of sketching and photographic research, the decision was to create a logo system of woodland animals that they could use to separate the different categories of products they sold.</p>
-<div class="well-made--sketches"></div>
-<div class="well-made--sketches-system"></div>
-<p>The final logo had various different lockups to account for the different products the logo would live on. The logotype designs captured some of the rustic, manifest destiny feel that suits the outdoors while the bear provided a metaphor for ursa major and the North Star. The bear and its reference to the north star became a way for Well Made Co. to say: when you're with Well Made Co., you're never lost.</p>
-<div class="well-made--callout"></div>
-<p>The logo was mocked up on all sorts of packaging to hone in on the three that made the final cut: product tags, store bags, and tubes for storing trinkets.</p>
-<div class="well-made--tag"></div>
-<p>The product tags served the dual purpose of not only being traditional product tags in the store but also keychains with little sky maps that would glow in the dark. It went back to the idea that with Well Made Co., you were never lost: they even gave you the tools to find north in the dark.</p>
-<div class="well-made--product-tag-glowing"></div>
-<div class="well-made--tube"></div>
-<p>The store tubes, which could be used for carrying vertical items out of the store, doubled as a way to keep maps dry while on hikes.</p>
-<div class="well-made--tube-backpack"></div>
-<p>The store bags had a second life as bear hangs: each bag had instructions on how to use it to keep food away from the campsite so that pesky critters wouldn't bother you or your food.</p>
-<div class="well-made--store-bag-1"></div>
-<div class="well-made--store-bag-2"></div>
-<div class="well-made--store-bag-3"></div>
-</div>
-<footer class="post-footer"><a href="/">See more work</a></footer><script src="/js/scripts.d41d.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+<body class="default">
+<section id="head-wrapper">
+  <section id="small-top">
+    <header>
+      <a href="/">
+        <h1>RubyGems Guides</h1>
+      </a>
+    </header>
+  </section>
+</section>
 
-    ga('create', 'UA-48354895-2', 'helenvholmes.com');
-    ga('send', 'pageview');</script>
+<section id="container">
+  <div class="nav">
+    <span class="previous"><a href="/what-is-a-gem" class="left">← Previous</a></span>
+    <span class="next"><a href="/gems-with-extensions" class="right">Next →</a></span>
+  </div>
+  <section id="content">
+    <h1><a href="#">Make your own gem</a></h1>
+    <p>From start to finish, learn how to package your Ruby code in a gem.</p>
+
+<ul>
+  <li><a href="#intro">Introduction</a></li>
+  <li><a href="#first-gem">Your first gem</a></li>
+  <li><a href="#more-files">Requiring more files</a></li>
+  <li><a href="#adding-an-executable">Adding an executable</a></li>
+  <li><a href="#writing-tests">Writing tests</a></li>
+  <li><a href="#documenting-code">Documenting your code</a></li>
+  <li><a href="#wrapup">Wrapup</a></li>
+</ul>
+
+<p><a id="intro"> </a>
+Introduction
+————</p>
+
+<p>Creating and publishing your own gem is simple thanks to the tools baked right
+into RubyGems. Let’s make a simple “hello world” gem, and feel free to
+play along at home! The code for the gem we’re going to make here is up
+<a href="https://github.com/qrush/hola">on GitHub</a>.</p>
+
+<p><a id="first-gem"> </a>
+Your first gem
+————–</p>
+
+<p>I started with just one Ruby file for my <code>hola</code> gem, and the gemspec.
+You’ll need a new name for yours (maybe <code>hola_yourusername</code>) to publish it. Check the Patterns guide for
+<a href="/patterns/#consistent-naming">basic recommendations</a> to follow
+when naming a gem.</p>
+
+<pre><code>% tree
+.
+├── hola.gemspec
+└── lib
+    └── hola.rb
+</code></pre>
+
+<p>Code for your package is placed within the <code>lib</code> directory. The convention is
+to have <em>one</em> Ruby file with the <em>same</em> name as your gem, since that gets
+loaded when <code>require 'hola'</code> is run. That one file is in charge of setting up
+your gem’s code and API.</p>
+
+<p>The code inside of <code>lib/hola.rb</code> is pretty bare bones. It just makes sure that you
+can see some output from the gem:</p>
+
+<pre><code>% cat lib/hola.rb
+class Hola
+  def self.hi
+    puts "Hello world!"
+  end
+end
+</code></pre>
+
+<p>The gemspec defines what’s in the gem, who made it, and the version of the gem.
+It’s also your interface to <a href="http://rubygems.org">RubyGems.org</a>. All of the
+information you see on a gem page
+(like <a href="http://rubygems.org/gems/jekyll">jekyll</a>’s) comes from the gemspec.</p>
+
+<pre><code>% cat hola.gemspec
+Gem::Specification.new do |s|
+  s.name        = 'hola'
+  s.version     = '0.0.0'
+  s.date        = '2010-04-28'
+  s.summary     = "Hola!"
+  s.description = "A simple hello world gem"
+  s.authors     = ["Nick Quaranto"]
+  s.email       = 'nick@quaran.to'
+  s.files       = ["lib/hola.rb"]
+  s.homepage    =
+    'http://rubygems.org/gems/hola'
+  s.license       = 'MIT'
+end
+</code></pre>
+
+<blockquote>
+  <p>The description member can be much longer than you see in this example. If it
+matches <code>/^== [A-Z]/</code> then the description will be run through
+<a href="http://rdoc.rubyforge.org/RDoc/Markup.html">RDoc’s markup formatter</a> for display on
+the RubyGems web site. Be aware though that other consumers of the data might not
+understand this markup.</p>
+</blockquote>
+
+<p>Look familiar? The gemspec is also Ruby, so you can wrap scripts to generate
+the file names and bump the version number. There are lots of fields the
+gemspec can contain. To see them all check out the full
+<a href="/specification-reference">reference</a>.</p>
+
+<p>After you have created a gemspec, you can build a gem from it. Then you can install
+the generated gem locally to test it out.</p>
+
+<pre><code>% gem build hola.gemspec
+Successfully built RubyGem
+Name: hola
+Version: 0.0.0
+File: hola-0.0.0.gem
+
+% gem install ./hola-0.0.0.gem
+Successfully installed hola-0.0.0
+1 gem installed
+</code></pre>
+
+<p>Of course, the smoke test isn’t over yet: the final step is to <code>require</code> the gem and use it:</p>
+
+<pre><code>% irb
+&gt;&gt; require 'hola'
+=&gt; true
+&gt;&gt; Hola.hi
+Hello world!
+</code></pre>
+
+<blockquote>
+  <p>If you’re using an earlier Ruby than 1.9.2, you need to start the
+session with <code>irb -rubygems</code> or require the rubygems library after
+you launch irb.</p>
+</blockquote>
+
+<p>Now you can share hola with the rest of the Ruby community. Publishing your
+gem out to RubyGems.org only takes one command, provided that you have an account on
+the site. To setup your computer with your RubyGems account:</p>
+
+<pre><code>$ curl -u qrush https://rubygems.org/api/v1/api_key.yaml &gt;
+~/.gem/credentials; chmod 0600 ~/.gem/credentials
+
+Enter host password for user 'qrush':
+</code></pre>
+
+<blockquote>
+  <p>If you’re having problems with curl, OpenSSL, or certificates, you might want to
+simply try entering the above URL in your browser’s address bar.  Your browser will
+ask you to login to RubyGems.org.  Enter your username and password.  Your browser
+will now try to download the file api_key.yaml.  Save it in ~/.gem and call it ‘credentials’</p>
+</blockquote>
+
+<p>Once this has been setup, you can push out the gem:</p>
+
+<pre><code>% gem push hola-0.0.0.gem
+Pushing gem to RubyGems.org...
+Successfully registered gem: hola (0.0.0)
+</code></pre>
+
+<p>In just a short time (usually less than a minute), your gem will be available for
+installation by anyone. You can see it <a href="https://rubygems.org/gems/hola">on the RubyGems.org site</a>
+or grab it from any computer with RubyGems installed:</p>
+
+<pre><code>% gem list -r hola
+
+*** REMOTE GEMS ***
+
+hola (0.0.0)
+
+% gem install hola
+Successfully installed hola-0.0.0
+1 gem installed
+</code></pre>
+
+<p>It’s really that easy to share code with Ruby and RubyGems.</p>
+
+<p><a id="more-files"> </a>
+Requiring more files
+——————–</p>
+
+<p>Having everything in one file doesn’t scale well. Let’s add some more code to
+this gem.</p>
+
+<pre><code>% cat lib/hola.rb
+class Hola
+  def self.hi(language = "english")
+    translator = Translator.new(language)
+    translator.hi
+  end
+end
+
+class Hola::Translator
+  def initialize(language)
+    @language = language
+  end
+
+  def hi
+    case @language
+    when "spanish"
+      "hola mundo"
+    else
+      "hello world"
+    end
+  end
+end
+</code></pre>
+
+<p>This file is getting pretty crowded. Let’s break out the <code>Translator</code> into a
+separate file. As mentioned before, the gem’s root file is in charge of
+loading code for the gem. The other files for a gem are usually placed in a
+directory of the same name of the gem inside of <code>lib</code>. We can split this gem
+out like so:</p>
+
+<pre><code>% tree
+.
+├── hola.gemspec
+└── lib
+    ├── hola
+    │   └── translator.rb
+    └── hola.rb
+</code></pre>
+
+<p>The <code>Translator</code> is now in <code>lib/hola</code>, which can easily be picked up with a
+<code>require</code> statement from <code>lib/hola.rb</code>. The code for the <code>Translator</code> did not
+change much:</p>
+
+<pre><code>% cat lib/hola/translator.rb
+class Translator
+  def initialize(language)
+    @language = language
+  end
+
+  def hi
+    case @language
+    when "spanish"
+      "hola mundo"
+    else
+      "hello world"
+    end
+  end
+end
+</code></pre>
+
+<p>But now the <code>hola.rb</code> file has some code to load the <code>Translator</code>:</p>
+
+<pre><code>% cat lib/hola.rb
+class Hola
+  def self.hi(language = "english")
+    translator = Translator.new(language)
+    translator.hi
+  end
+end
+
+require 'hola/translator'
+</code></pre>
+
+<blockquote>
+  <p>Gotcha:
+For newly created folder/file, do not forget to add one entry in hola.gemspec file, as shown-</p>
+</blockquote>
+
+<pre><code>% cat hola.gemspec
+Gem::Specification.new do |s|
+...
+s.files       = ["lib/hola.rb", "lib/hola/translator.rb"]
+...
+end
+</code></pre>
+
+<blockquote>
+  <p>without the above change, new folder would not be included into the installed gem.</p>
+</blockquote>
+
+<p>Let’s try this out. First, fire up <code>irb</code>:</p>
+
+<pre><code>% irb -Ilib -rhola
+irb(main):001:0&gt; Hola.hi("english")
+=&gt; "hello world"
+irb(main):002:0&gt; Hola.hi("spanish")
+=&gt; "hola mundo"
+</code></pre>
+
+<p>We need to use a strange command line flag here: <code>-Ilib</code>. Usually RubyGems
+includes the <code>lib</code> directory for you, so end users don’t need to worry about
+configuring their load paths. However, if you’re running the code outside of
+RubyGems, you have to configure things yourself. It’s possible to manipulate
+the <code>$LOAD_PATH</code> from within the code itself, but that’s considered an
+anti-pattern in most cases. There are many more anti-patterns (and good patterns!)
+for gems, explained in <a href="/patterns">this guide</a>.</p>
+
+<p>If you’ve added more files to your gem, make sure to remember to add them to
+your gemspec’s <code>files</code> array before publishing a new gem! For this reason (among others),
+many developers automate this with <a href="http://seattlerb.rubyforge.org/hoe/">Hoe</a>,
+<a href="https://github.com/technicalpickles/jeweler">Jeweler</a>,
+<a href="http://rake.rubyforge.org/classes/Rake/GemPackageTask.html">Rake</a>,
+<a href="http://railscasts.com/episodes/245-new-gem-with-bundler">Bundler</a>, or
+<a href="https://github.com/wycats/newgem-template/blob/master/newgem.gemspec">just a dynamic gemspec
+</a>.</p>
+
+<p>Adding more directories with more code from here is pretty much the same
+process. Split your Ruby files up when it makes sense! Making a sane order for
+your project will help you and your future maintainers from headaches down the
+line.</p>
+
+<p><a id="adding-an-executable"> </a>
+Adding an executable
+——————–</p>
+
+<p>In addition to providing libraries of Ruby code, gems can also expose one or many
+executable files to your shell’s <code>PATH</code>. Probably the best known example of
+this is <code>rake</code>. Another very useful one is <code>prettify_json.rb</code>, included
+with the <a href="http://rubygems.org/gems/json">JSON</a> gem, which formats JSON in a
+readable manner (and is included with Ruby 1.9). Here’s an example:</p>
+
+<pre><code>% curl -s http://jsonip.com/ | \
+  prettify_json.rb
+{
+  "ip": "24.60.248.134"
+}
+</code></pre>
+
+<p>Adding an executable to a gem is a simple process. You just need to place the file in
+your gem’s <code>bin</code> directory, and then add it to the list of executables
+in the gemspec. Let’s add one for the Hola gem. First create the file
+and make it executable:</p>
+
+<pre><code>% mkdir bin
+% touch bin/hola
+% chmod a+x bin/hola
+</code></pre>
+
+<p>The executable file itself just needs a
+<a href="http://www.catb.org/jargon/html/S/shebang.html">shebang</a> in order to figure out
+what program to run it with. Here’s what Hola’s executable looks like:</p>
+
+<pre><code>% cat bin/hola
+#!/usr/bin/env ruby
+
+require 'hola'
+puts Hola.hi(ARGV[0])
+</code></pre>
+
+<p>All it’s doing is loading up the gem, and passing the first command line
+argument as the language to say hello with. Here’s an example of running it:</p>
+
+<pre><code>% ruby -Ilib ./bin/hola
+hello world
+
+% ruby -Ilib ./bin/hola spanish
+hola mundo
+</code></pre>
+
+<p>Finally, to get Hola’s executable included when you push the gem, you’ll need
+to add it in the gemspec.</p>
+
+<pre><code>% head -4 hola.gemspec
+Gem::Specification.new do |s|
+  s.name        = 'hola'
+  s.version     = '0.0.1'
+  s.executables &lt;&lt; 'hola'
+</code></pre>
+
+<p>Push up that new gem, and you’ll have your own command line utility published!
+You can add more executables as well in the <code>bin</code> directory if you need to,
+there’s an <code>executables</code> array field on the gemspec.</p>
+
+<blockquote>
+  <p>Note that you should change the gem’s version when pushing up a new release.
+For more information on gem versioning, see the <a href="/patterns/#semantic-versioning">Patterns Guide</a></p>
+</blockquote>
+
+<p><a id="writing-tests"> </a>
+Writing tests
+————–</p>
+
+<p>Testing your gem is extremely important. Not only does it help assure you that
+your code works, but it helps others know that your gem does its job. When
+evaluating a gem, Ruby developers tend to view a solid test suite (or lack thereof)
+as one of the main reasons for trusting that piece of code.</p>
+
+<p>Gems support adding test files into the package itself so tests can be run
+when a gem is downloaded. An entire community effort has sprung up called
+<a href="http://test.rubygems.org/">GemTesters</a> to help document how gem test suites
+run on different architectures and interpreters of Ruby.</p>
+
+<p>In short: <em>TEST YOUR GEM!</em> Please!</p>
+
+<p><code>Test::Unit</code> is Ruby’s built-in test framework. There are
+<a href="http://www.mikeperham.com/2012/09/25/minitest-ruby-1-9s-test-framework/">lots</a> of
+<a href="https://github.com/seattlerb/minitest/blob/master/README.txt">tutorials</a> for
+using it online. There are many other test frameworks available for Ruby as
+well. <a href="http://rspec.info/">RSpec</a> is a popular choice. At the end of the day,
+it doesn’t matter what you use, just <em>TEST</em>!</p>
+
+<p>Let’s add some tests to Hola. This requires adding a few more files, namely a
+<code>Rakefile</code> and a brand new <code>test</code> directory:</p>
+
+<pre><code>% tree
+.
+├── Rakefile
+├── bin
+│   └── hola
+├── hola.gemspec
+├── lib
+│   ├── hola
+│   │   └── translator.rb
+│   └── hola.rb
+└── test
+    └── test_hola.rb
+</code></pre>
+
+<p>The <code>Rakefile</code> gives you some simple automation for running tests:</p>
+
+<pre><code>% cat Rakefile
+require 'rake/testtask'
+
+Rake::TestTask.new do |t|
+  t.libs &lt;&lt; 'test'
+end
+
+desc "Run tests"
+task :default =&gt; :test
+</code></pre>
+
+<p>Now you can run <code>rake test</code> or simply just <code>rake</code> to run tests. Woot! Here’s
+a basic test file for hola:</p>
+
+<pre><code>% cat test/test_hola.rb
+require 'minitest/autorun'
+require 'hola'
+
+class HolaTest &lt; Minitest::Test
+  def test_english_hello
+    assert_equal "hello world",
+      Hola.hi("english")
+  end
+
+  def test_any_hello
+    assert_equal "hello world",
+      Hola.hi("ruby")
+  end
+
+  def test_spanish_hello
+    assert_equal "hola mundo",
+      Hola.hi("spanish")
+  end
+end
+</code></pre>
+
+<p>Finally, to run the tests:</p>
+
+<pre><code>% rake test
+(in /Users/qrush/Dev/ruby/hola)
+Loaded suite
+Started
+...
+Finished in 0.000736 seconds.
+
+3 tests, 3 assertions, 0 failures, 0 errors, 0 skips
+
+Test run options: --seed 15331
+</code></pre>
+
+<p>It’s green! Well, depending on your shell colors. For more great examples, the best thing you can do is hunt around
+<a href="https://github.com/search?utf8=%E2%9C%93&amp;q=stars%3A%3E100+forks%3A%3E10&amp;type=Repositories&amp;ref=advsearch&amp;l=Ruby">GitHub</a> and read some code.</p>
+
+<p><a id="documenting-code"> </a>
+Documenting your code
+———————</p>
+
+<p>By default most gems use RDoc to generate docs. There are plenty of
+<a href="http://docs.seattlerb.org/rdoc/RDoc/Markup.html">great tutorials</a> for learning how
+to mark up your code with RDoc. Here’s a simple example:</p>
+
+<pre><code># The main Hola driver
+class Hola
+  # Say hi to the world!
+  #
+  # Example:
+  #   &gt;&gt; Hola.hi("spanish")
+  #   =&gt; hola mundo
+  #
+  # Arguments:
+  #   language: (String)
+
+  def self.hi(language = "english")
+    translator = Translator.new(language)
+    puts translator.hi
+  end
+end
+</code></pre>
+
+<p>Another great option for documentation is <a href="http://yardoc.org/">YARD</a>, since
+when you push a gem, <a href="http://rubydoc.info/">RubyDoc.info</a> generates YARDocs
+automatically from your gem. YARD is backwards compatible with RDoc, and it
+has a <a href="http://rubydoc.info/docs/yard/file/docs/GettingStarted.md">good
+introduction</a> on
+what’s different and how to use it.</p>
+
+<p><a id="wrapup"> </a>
+Wrapup
+——</p>
+
+<p>With this basic understanding of building your own RubyGem, we hope you’ll be
+on your way to making your own! The next few guides cover patterns in making a
+gem and the other capabilities of the RubyGems system.</p>
+
+<p><a id="credits"> </a>
+Credits
+——-</p>
+
+<p>This tutorial was adapted from <a href="http://rubylearning.com/blog/2010/10/06/gem-sawyer-modern-day-ruby-warrior/">Gem Sawyer, Modern Day Ruby
+Warrior</a>.
+The code for this gem can be found <a href="https://github.com/qrush/hola">on GitHub</a>.</p>
+
+  </section>
+  <div class="nav">
+    <span class="previous"><a href="/what-is-a-gem" class="left">← Previous</a></span>
+    <span class="next"><a href="/gems-with-extensions" class="right">Next →</a></span>
+  </div>
+  <footer>
+    <p>
+      hosted on <a href="http://pages.github.com/">GitHub</a> | these guides are <a href="https://github.com/rubygems/guides">open source</a> and  <a href="http://creativecommons.org/licenses/by/3.0/">free to remix</a>
+    </p>
+  </footer>
+</section>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-10315684-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 </body>
 </html>

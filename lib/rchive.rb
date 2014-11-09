@@ -3,7 +3,7 @@ require 'open-uri'
 require 'nokogiri'
 require 'pry'
 
-class Rget
+class Rchive
 
   attr_accessor :images, :csss, :doc, :url
 
@@ -57,7 +57,3 @@ class Rget
   end
 
 end
-
-url = 'http://helenvholmes.com/2014/03/29/well-made-co.html'
-r = Rget.new( url )
-r.save
